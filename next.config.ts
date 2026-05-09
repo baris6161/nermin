@@ -4,12 +4,12 @@ const isDev = process.env.NODE_ENV === 'development';
 
 const cspHeader = `
   default-src 'self';
-  script-src 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ''} https://assets.calendly.com https://va.vercel-scripts.com https://app.cal.com;
+  script-src 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ''} https://va.vercel-scripts.com https://cal.eu;
   style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
   font-src 'self' https://fonts.gstatic.com;
   img-src 'self' blob: data: https:;
-  connect-src 'self' https://vitals.vercel-insights.com https://va.vercel-scripts.com https://app.cal.com;
-  frame-src https://calendly.com https://cal.com https://app.cal.com;
+  connect-src 'self' https://vitals.vercel-insights.com https://va.vercel-scripts.com https://cal.eu;
+  frame-src https://cal.eu;
   frame-ancestors 'none';
   object-src 'none';
   base-uri 'self';

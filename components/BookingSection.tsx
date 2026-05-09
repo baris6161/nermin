@@ -30,7 +30,9 @@ export default function BookingSection() {
 
           <div className="booking-widget reveal">
             <Cal
-              calLink="nermin-el-rifaey/30-minuten-termin"
+              calLink="nermin-el-rifaey/30min"
+              calOrigin="https://cal.eu"
+              embedJsUrl="https://cal.eu/embed/embed.js"
               config={{
                 theme: 'dark',
                 brandColor: 'c46a4f',
