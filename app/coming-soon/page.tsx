@@ -91,18 +91,8 @@ export default function ComingSoon() {
         </div>
 
         <div className="cs-images">
-          <div className="cs-img cs-img-1">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/images/ankleide.jpg" alt="" />
-          </div>
-          <div className="cs-img cs-img-2">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/images/badezimmer.jpg" alt="" />
-          </div>
-          <div className="cs-img cs-img-3">
-            {/* eslint-disable-next-line @next/next/no-img-element */}
-            <img src="/images/wohnzimmer.jpg" alt="" />
-          </div>
+          {/* eslint-disable-next-line @next/next/no-img-element */}
+          <img className="cs-img-main" src="/images/arbeitsbereich.jpg" alt="" />
         </div>
       </div>
 
