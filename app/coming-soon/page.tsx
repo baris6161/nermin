@@ -1,15 +1,30 @@
 'use client';
 
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import type { Metadata } from 'next';
 
 export default function ComingSoon() {
+  const [modalOpen, setModalOpen] = useState(false);
   const [name, setName] = useState('');
   const [password, setPassword] = useState('');
   const [error, setError] = useState('');
   const [loading, setLoading] = useState(false);
   const router = useRouter();
+
+  useEffect(() => {
+    document.documentElement.style.background = '#1a1714';
+    document.body.style.background = '#1a1714';
+    return () => {
+      document.documentElement.style.background = '';
+      document.body.style.background = '';
+    };
+  }, []);
+
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => { if (e.key === 'Escape') setModalOpen(false); };
+    window.addEventListener('keydown', onKey);
+    return () => window.removeEventListener('keydown', onKey);
+  }, []);
 
   async function handleLogin(e: React.FormEvent) {
     e.preventDefault();
@@ -38,45 +53,75 @@ export default function ComingSoon() {
     <div className="cs">
       <div className="grain" />
 
+      {/* Header */}
       <header className="cs-header">
         <div className="cs-logo">
           <span className="cs-dot" />
           nermin<span className="cs-logo-sub">interiors</span>
         </div>
+        <button className="cs-admin-btn" onClick={() => setModalOpen(true)}>
+          Admin
+        </button>
       </header>
 
-      <main className="cs-main">
-        <div className="cs-tag eyebrow">Interior Design Studio</div>
+      {/* Body: left content + right images */}
+      <div className="cs-body">
+        <div className="cs-left">
+          <div className="cs-tag eyebrow">Interior Design Studio</div>
+          <h1 className="cs-h">
+            Bald<br />
+            <em>für dich da.</em>
+          </h1>
+          <p className="cs-lede">
+            Minimalistisches Interior Design für Menschen,
+            die Klarheit und Qualität schätzen.
+          </p>
+          <a
+            className="cs-insta"
+            href="https://instagram.com/nermiin.interiors"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            <svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4">
+              <rect x="3" y="3" width="18" height="18" rx="5" />
+              <circle cx="12" cy="12" r="4" />
+              <circle cx="17.5" cy="6.5" r=".7" fill="currentColor" stroke="none" />
+            </svg>
+            @nermiin.interiors
+          </a>
+        </div>
 
-        <h1 className="cs-h">
-          Bald<br />
-          <em>für dich da.</em>
-        </h1>
+        <div className="cs-images">
+          <div className="cs-img cs-img-1">
+            <img src="/images/ankleide.jpg" alt="Ankleide" />
+          </div>
+          <div className="cs-img cs-img-2">
+            <img src="/images/badezimmer.jpg" alt="Badezimmer" />
+          </div>
+          <div className="cs-img cs-img-3">
+            <img src="/images/wohnzimmer.jpg" alt="Wohnzimmer" />
+          </div>
+        </div>
+      </div>
 
-        <p className="cs-lede">
-          Minimalistisches Interior Design für Menschen,<br />
-          die Klarheit und Qualität schätzen.
-        </p>
-
-        <a
-          className="cs-insta"
-          href="https://instagram.com/nermiin.interiors"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4">
-            <rect x="3" y="3" width="18" height="18" rx="5" />
-            <circle cx="12" cy="12" r="4" />
-            <circle cx="17.5" cy="6.5" r=".7" fill="currentColor" stroke="none" />
-          </svg>
-          @nermiin.interiors
-        </a>
-      </main>
-
+      {/* Footer */}
       <footer className="cs-footer">
-        <form className="cs-form" onSubmit={handleLogin}>
-          <div className="cs-fields">
-            <div className="cs-field">
+        <p className="cs-copy">© {new Date().getFullYear()} Nermin El Rifaey</p>
+      </footer>
+
+      {/* Admin Login Modal */}
+      {modalOpen && (
+        <div className="cs-overlay" onClick={() => setModalOpen(false)}>
+          <div className="cs-modal" onClick={(e) => e.stopPropagation()}>
+            <button className="cs-modal-close" onClick={() => setModalOpen(false)} aria-label="Schließen">
+              <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="1.5">
+                <line x1="1" y1="1" x2="13" y2="13" />
+                <line x1="13" y1="1" x2="1" y2="13" />
+              </svg>
+            </button>
+            <div className="eyebrow cs-modal-eyebrow">Preview</div>
+            <h2 className="cs-modal-h">Zugang</h2>
+            <form className="cs-modal-form" onSubmit={handleLogin}>
               <input
                 type="text"
                 placeholder="Name"
@@ -85,8 +130,6 @@ export default function ComingSoon() {
                 onChange={(e) => setName(e.target.value)}
                 required
               />
-            </div>
-            <div className="cs-field">
               <input
                 type="password"
                 placeholder="Passwort"
@@ -95,15 +138,14 @@ export default function ComingSoon() {
                 onChange={(e) => setPassword(e.target.value)}
                 required
               />
-            </div>
-            <button className="cs-btn" type="submit" disabled={loading}>
-              {loading ? '…' : 'Einloggen'}
-            </button>
+              {error && <p className="cs-error">{error}</p>}
+              <button className="cs-btn" type="submit" disabled={loading}>
+                {loading ? '…' : 'Einloggen'}
+              </button>
+            </form>
           </div>
-          {error && <p className="cs-error">{error}</p>}
-        </form>
-        <p className="cs-copy">© {new Date().getFullYear()} Nermin El Rifaey</p>
-      </footer>
+        </div>
+      )}
     </div>
   );
 }
