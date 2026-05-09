@@ -1,7 +1,5 @@
 'use client';
 
-import Cal from '@calcom/embed-react';
-
 export default function BookingSection() {
   return (
     <section className="booking" id="buchen">
@@ -29,16 +27,14 @@ export default function BookingSection() {
           </div>
 
           <div className="booking-widget reveal">
-            <Cal
-              calLink="nermin-el-rifaey/30min"
-              calOrigin="https://cal.eu"
-              embedJsUrl="https://cal.eu/embed/embed.js"
-              config={{
-                theme: 'dark',
-                brandColor: 'c46a4f',
-                background: '1a1714',
-              }}
-              style={{ width: '100%', height: '660px', overflow: 'scroll' }}
+            <iframe
+              src="https://cal.eu/nermin-el-rifaey/30min?theme=dark&brandColor=c46a4f&layout=month_view&hideEventTypeDetails=false&embed=true"
+              width="100%"
+              height="660"
+              frameBorder="0"
+              scrolling="no"
+              title="Design Call buchen"
+              style={{ borderRadius: '4px', display: 'block' }}
             />
           </div>
         </div>
