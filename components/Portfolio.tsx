@@ -11,13 +11,13 @@ const works = [
     num: '02 / 04', cls: 'work-2',
     img: '/images/ankleide.jpg', alt: 'Ankleide',
     title: 'Ankleide', mood: 'Ruhig · Warm', yr: 'N° 02 · 2025',
-    sizes: '(max-width: 980px) 100vw, 27vw',
+    sizes: '(max-width: 980px) 100vw, 35vw',
   },
   {
     num: '03 / 04', cls: 'work-3',
     img: '/images/arbeitsbereich.jpg', alt: 'Arbeitsbereich',
     title: 'Arbeitsbereich', mood: 'Klar · Fokussiert', yr: 'N° 03 · 2026',
-    sizes: '(max-width: 980px) 100vw, 27vw',
+    sizes: '(max-width: 980px) 100vw, 35vw',
   },
   {
     num: '04 / 04', cls: 'work-4',
@@ -53,7 +53,7 @@ export default function Portfolio() {
                   src={w.img}
                   alt={w.alt}
                   fill
-                  quality={80}
+                  quality={90}
                   sizes={w.sizes}
                   style={{ objectFit: 'cover' }}
                 />
