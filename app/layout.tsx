@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     template: '%s - Nermin Interiors',
   },
   description:
-    'Minimalistisches Interior Design von Nermin El Rifaey. Klare, durchdachte Raeume - reduziert, warm, zeitlos. Design Call, E-Design & Curated Shopping.',
+    'Minimalistisches Interior Design von Nermin El Rifaey. Klare, durchdachte Räume - reduziert, warm, zeitlos. Design Call, E-Design & Curated Shopping.',
   keywords: [
     'Interior Design', 'Inneneinrichtung', 'Minimalistisch', 'Raumgestaltung',
     'Nermin Interiors', 'E-Design', 'Moodboard', 'Interior Beratung', 'Online Interior Design',
@@ -53,7 +53,7 @@ export const metadata: Metadata = {
     siteName: 'Nermin Interiors',
     title: 'Nermin Interiors - Minimalistisches Interior Design',
     description:
-      'Klare, durchdachte Raeume fuer Menschen, die Wert auf Ruhe und Qualitaet legen. Reduziert. Warm. Im Alltag bewohnbar.',
+      'Klare, durchdachte Räume für Menschen, die Wert auf Ruhe und Qualität legen. Reduziert. Warm. Im Alltag bewohnbar.',
     images: [
       {
         url: '/og',
@@ -66,7 +66,7 @@ export const metadata: Metadata = {
   twitter: {
     card: 'summary_large_image',
     title: 'Nermin Interiors - Minimalistisches Interior Design',
-    description: 'Klare, durchdachte Raeume. Reduziert. Warm. Zeitlos.',
+    description: 'Klare, durchdachte Räume. Reduziert. Warm. Zeitlos.',
     images: ['/og'],
   },
   robots: isProduction

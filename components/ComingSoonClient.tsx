@@ -40,7 +40,7 @@ export default function ComingSoonClient() {
         router.push('/');
         router.refresh();
       } else {
-        setError('Zugangsdaten ungueltig.');
+        setError('Zugangsdaten ungültig.');
         setLoading(false);
       }
     } catch {
@@ -67,11 +67,11 @@ export default function ComingSoonClient() {
           <div className="cs-tag eyebrow">Interior Design Studio</div>
           <h1 className="cs-h">
             Bald<br />
-            <em>fuer dich da.</em>
+            <em>für dich da.</em>
           </h1>
           <p className="cs-lede">
-            Minimalistisches Interior Design fuer Menschen,
-            die Klarheit und Qualitaet schaetzen.
+            Minimalistisches Interior Design für Menschen,
+            die Klarheit und Qualität schätzen.
           </p>
           <a
             className="cs-insta"
@@ -101,7 +101,7 @@ export default function ComingSoonClient() {
       {modalOpen && (
         <div className="cs-overlay" onClick={() => setModalOpen(false)}>
           <div className="cs-modal" onClick={(e) => e.stopPropagation()}>
-            <button className="cs-modal-close" onClick={() => setModalOpen(false)} aria-label="Schliessen">
+            <button className="cs-modal-close" onClick={() => setModalOpen(false)} aria-label="Schließen">
               <svg width="14" height="14" viewBox="0 0 14 14" fill="none" stroke="currentColor" strokeWidth="1.5">
                 <line x1="1" y1="1" x2="13" y2="13" />
                 <line x1="13" y1="1" x2="1" y2="13" />
