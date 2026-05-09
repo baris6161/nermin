@@ -1,8 +1,23 @@
 'use client';
 
 import Script from 'next/script';
+import { useEffect } from 'react';
 
 export default function BookingSection() {
+  useEffect(() => {
+    const widget = document.querySelector('.calendly-inline-widget');
+    if (!widget) return;
+    const observer = new MutationObserver(() => {
+      const iframe = widget.querySelector('iframe') as HTMLIFrameElement | null;
+      if (iframe) {
+        iframe.setAttribute('scrolling', 'no');
+        observer.disconnect();
+      }
+    });
+    observer.observe(widget, { childList: true, subtree: true });
+    return () => observer.disconnect();
+  }, []);
+
   return (
     <section className="booking" id="buchen">
       <div className="wrap">
@@ -32,7 +47,7 @@ export default function BookingSection() {
           <div
             className="calendly-inline-widget"
             data-url="https://calendly.com/rifaey-nermin/30min?hide_gdpr_banner=1&background_color=1a1714&text_color=f3ede4&primary_color=c46a4f"
-            style={{ minWidth: '320px', height: '700px' }}
+            style={{ minWidth: '320px', height: '660px' }}
           />
         </div>
       </div>
