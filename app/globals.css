@@ -608,17 +608,17 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: non
   flex-shrink: 0;
 }
 .cs-logo {
-  font-family: var(--serif); font-style: italic; font-size: 22px;
+  font-family: var(--serif); font-style: italic; font-size: 24px;
   letter-spacing: -0.015em; color: var(--cream);
-  display: flex; align-items: baseline; gap: .45em;
+  display: flex; align-items: center; gap: 14px;
 }
-.cs-dot {
-  width: 6px; height: 6px; background: var(--terracotta); border-radius: 50%;
-  display: inline-block; transform: translateY(-3px); flex-shrink: 0;
+.cs-logo-rule {
+  display: inline-block; width: 28px; height: 1px;
+  background: var(--terracotta); flex-shrink: 0;
 }
 .cs-logo-sub {
-  font-style: normal; font-family: var(--sans); font-size: 10px;
-  letter-spacing: .22em; text-transform: uppercase; color: rgba(243,237,228,.45);
+  font-style: normal; font-family: var(--mono); font-size: 9.5px;
+  letter-spacing: .26em; text-transform: uppercase; color: rgba(243,237,228,.42);
 }
 .cs-admin-btn {
   font-family: var(--mono); font-size: 10px; letter-spacing: .14em; text-transform: uppercase;
@@ -665,7 +665,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: non
   height: 100%;
   max-height: 72vh;
 }
-.cs-img { overflow: hidden; border-radius: 3px; }
+.cs-img { overflow: hidden; border-radius: 3px; position: relative; }
 .cs-img img { width: 100%; height: 100%; object-fit: cover; display: block; }
 .cs-img-1 { grid-column: 1; grid-row: 1 / 3; }
 .cs-img-2 { grid-column: 2; grid-row: 1; }

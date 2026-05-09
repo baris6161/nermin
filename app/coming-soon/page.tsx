@@ -57,8 +57,7 @@ export default function ComingSoon() {
       {/* Header */}
       <header className="cs-header">
         <div className="cs-logo">
-          <span className="cs-dot" />
-          nermin<span className="cs-logo-sub">interiors</span>
+          Nermin<span className="cs-logo-rule" aria-hidden="true" /><span className="cs-logo-sub">interiors</span>
         </div>
         <button className="cs-admin-btn" onClick={() => setModalOpen(true)}>
           Admin
