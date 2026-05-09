@@ -2,7 +2,6 @@
 
 import { useState, useEffect } from 'react';
 import { useRouter } from 'next/navigation';
-import Image from 'next/image';
 
 export default function ComingSoon() {
   const [modalOpen, setModalOpen] = useState(false);
@@ -93,13 +92,16 @@ export default function ComingSoon() {
 
         <div className="cs-images">
           <div className="cs-img cs-img-1">
-            <Image src="/images/ankleide.jpg" alt="Ankleide" fill unoptimized style={{ objectFit: 'cover' }} />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/images/ankleide.jpg" alt="" />
           </div>
           <div className="cs-img cs-img-2">
-            <Image src="/images/badezimmer.jpg" alt="Badezimmer" fill unoptimized style={{ objectFit: 'cover' }} />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/images/badezimmer.jpg" alt="" />
           </div>
           <div className="cs-img cs-img-3">
-            <Image src="/images/wohnzimmer.jpg" alt="Wohnzimmer" fill unoptimized style={{ objectFit: 'cover' }} />
+            {/* eslint-disable-next-line @next/next/no-img-element */}
+            <img src="/images/wohnzimmer.jpg" alt="" />
           </div>
         </div>
       </div>
