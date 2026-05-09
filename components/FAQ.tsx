@@ -21,7 +21,7 @@ const faqs = [
   {
     num: 'F 04',
     q: 'Was kostet ein vollständiges Konzept?',
-    a: 'Das E-Design-Paket startet bei 690 € pro Raum und beinhaltet Moodboard, Farbkonzept, Möbel- und Materialauswahl sowie eine kuratierte Shoppingliste. Optional kommt eine 3D-Visualisierung ab 290 € hinzu. Im unverbindlichen Design Call (90 €) klären wir, welcher Umfang zu deinem Projekt passt.',
+    a: 'Der Preis richtet sich nach dem Umfang deines Projekts und deinen individuellen Wünschen. Im unverbindlichen Design Call sprechen wir gemeinsam darüber, was zu dir passt, und ich stelle dir ein passendes Angebot zusammen.',
   },
 ];
 

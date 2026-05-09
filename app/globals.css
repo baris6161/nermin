@@ -450,7 +450,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: non
 .reviews-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2px; background: var(--hairline); }
 .review-card { background: var(--cream); padding: 44px 40px 40px; display: flex; flex-direction: column; gap: 28px; }
 .review-stars { color: var(--terracotta); font-size: 16px; letter-spacing: 2px; }
-.review-quote { font-family: var(--serif); font-weight: 300; font-size: 18px; line-height: 1.65; font-style: italic; color: var(--char); flex: 1; }
+.review-quote { font-family: var(--sans); font-weight: 300; font-size: 16px; line-height: 1.75; font-style: normal; color: var(--char); flex: 1; }
 .review-author { padding-top: 24px; border-top: 1px solid var(--hairline); display: flex; flex-direction: column; gap: 4px; }
 .review-name { font-family: var(--sans); font-weight: 500; font-size: 13px; color: var(--char); }
 .review-project { font-family: var(--mono); font-size: 11px; letter-spacing: .08em; color: var(--taupe-deep); }

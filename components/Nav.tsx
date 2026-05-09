@@ -1,11 +1,18 @@
 'use client';
 
 import { useEffect, useRef } from 'react';
+import { usePathname } from 'next/navigation';
 
 export default function Nav() {
   const navRef = useRef<HTMLElement>(null);
   const burgerRef = useRef<HTMLButtonElement>(null);
   const mnavRef = useRef<HTMLDivElement>(null);
+  const pathname = usePathname();
+  const isHome = pathname === '/';
+
+  function href(anchor: string) {
+    return isHome ? anchor : `/${anchor}`;
+  }
 
   useEffect(() => {
     const nav = navRef.current;
@@ -52,15 +59,15 @@ export default function Nav() {
   return (
     <>
       <header className="nav" ref={navRef}>
-        <a className="logo" href="#top">
+        <a className="logo" href="/">
           Nermin<span className="logo-sub">interiors</span>
         </a>
         <nav className="nav-links">
-          <a href="#studio">Studio</a>
-          <a href="#arbeiten">Arbeiten</a>
-          <a href="#leistungen">Leistungen</a>
-          <a href="#fragen">Fragen</a>
-          <a href="#buchen" className="nav-cta">Design Call</a>
+          <a href={href('#studio')}>Studio</a>
+          <a href={href('#arbeiten')}>Arbeiten</a>
+          <a href={href('#leistungen')}>Leistungen</a>
+          <a href={href('#fragen')}>Fragen</a>
+          <a href={href('#buchen')} className="nav-cta">Design Call</a>
         </nav>
         <button
           className="nav-burger"
@@ -76,11 +83,11 @@ export default function Nav() {
 
       <div className="mnav" aria-hidden="true" ref={mnavRef}>
         <div className="mnav-inner">
-          <a href="#studio">Studio</a>
-          <a href="#arbeiten">Arbeiten</a>
-          <a href="#leistungen">Leistungen</a>
-          <a href="#fragen">Fragen</a>
-          <a href="#buchen" className="mnav-cta">
+          <a href={href('#studio')}>Studio</a>
+          <a href={href('#arbeiten')}>Arbeiten</a>
+          <a href={href('#leistungen')}>Leistungen</a>
+          <a href={href('#fragen')}>Fragen</a>
+          <a href={href('#buchen')} className="mnav-cta">
             Design Call buchen<span className="arrow"></span>
           </a>
           <div className="mnav-meta">
