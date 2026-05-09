@@ -12,94 +12,25 @@ export async function GET() {
         style={{
           width: '1200px',
           height: '630px',
-          background: '#1a1714',
+          background: '#0f0d0b',
           display: 'flex',
-          flexDirection: 'column',
           alignItems: 'center',
           justifyContent: 'center',
-          position: 'relative',
         }}
       >
-        {/* Thin terracotta top bar */}
-        <div
+        <span
           style={{
-            position: 'absolute',
-            top: 0,
-            left: 0,
-            right: 0,
-            height: '2px',
-            background: '#c46a4f',
-            display: 'flex',
-          }}
-        />
-
-        {/* Center: stacked logo */}
-        <div
-          style={{
-            display: 'flex',
-            flexDirection: 'column',
-            alignItems: 'center',
-            gap: '0px',
-          }}
-        >
-          {/* NERMIN */}
-          <div
-            style={{
-              fontSize: '110px',
-              fontWeight: 300,
-              fontStyle: 'italic',
-              color: '#f3ede4',
-              letterSpacing: '-0.03em',
-              lineHeight: 0.9,
-              fontFamily: 'serif',
-              display: 'flex',
-            }}
-          >
-            Nermin
-          </div>
-
-          {/* Thin separator */}
-          <div
-            style={{
-              width: '48px',
-              height: '1px',
-              background: '#c46a4f',
-              margin: '20px 0 18px',
-              display: 'flex',
-            }}
-          />
-
-          {/* INTERIORS */}
-          <div
-            style={{
-              fontSize: '13px',
-              fontWeight: 400,
-              color: '#8a7a66',
-              letterSpacing: '0.38em',
-              textTransform: 'uppercase',
-              fontFamily: 'sans-serif',
-              display: 'flex',
-            }}
-          >
-            INTERIORS
-          </div>
-        </div>
-
-        {/* Bottom domain */}
-        <div
-          style={{
-            position: 'absolute',
-            bottom: '48px',
-            right: '72px',
-            fontSize: '13px',
-            color: '#3d342c',
-            letterSpacing: '0.1em',
-            fontFamily: 'sans-serif',
+            fontFamily: 'serif',
+            fontStyle: 'italic',
+            fontWeight: 300,
+            fontSize: '380px',
+            color: '#f3ede4',
+            lineHeight: 1,
             display: 'flex',
           }}
         >
-          nermin-interiors.de
-        </div>
+          N
+        </span>
       </div>
     ),
     { width: 1200, height: 630 }
