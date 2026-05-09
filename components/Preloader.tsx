@@ -14,14 +14,29 @@ export default function Preloader() {
       setTimeout(() => setDone(true), wait);
     };
 
-    if (document.readyState === 'complete') {
-      finish();
-    } else {
-      window.addEventListener('load', finish, { once: true });
-    }
+    // Small tick so Next.js has painted the DOM
+    const init = setTimeout(() => {
+      Promise.all([
+        // 1. Fonts ready → marquee text renders correctly
+        document.fonts.ready,
+        // 2. Hero image loaded → no visible image pop-in
+        new Promise<void>((resolve) => {
+          const img = document.querySelector<HTMLImageElement>('.hero-img img');
+          if (!img) { resolve(); return; }
+          if (img.complete && img.naturalWidth > 0) { resolve(); return; }
+          img.addEventListener('load',  () => resolve(), { once: true });
+          img.addEventListener('error', () => resolve(), { once: true });
+        }),
+      ]).then(finish);
+    }, 60);
 
-    const safety = setTimeout(() => setDone(true), 5000);
-    return () => clearTimeout(safety);
+    // Hard safety cap: 7 seconds max
+    const safety = setTimeout(() => setDone(true), 7000);
+
+    return () => {
+      clearTimeout(init);
+      clearTimeout(safety);
+    };
   }, []);
 
   return (
