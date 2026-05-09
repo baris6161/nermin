@@ -15,7 +15,7 @@ export default function Services() {
             <span>Raum.</span>
           </h2>
           <p className="services-lede reveal">
-            Individuelle Interior-Konzepte, Moodboards und 3D-Visualisierungen — flexibel online
+            Individuelle Interior-Konzepte, Moodboards und 3D-Visualisierungen. Flexibel online
             begleitet, mit Fokus auf reduzierte Räume und ruhige Gesamtwirkung.
           </p>
         </div>
@@ -26,7 +26,7 @@ export default function Services() {
             <h3 className="svc-title">Design&nbsp;Call</h3>
             <div className="svc-tag">90 Minuten · Online</div>
             <p className="svc-desc">
-              Frische Ideen, professionelle Tipps und direkte Antworten — gemeinsam besprechen wir,
+              Frische Ideen, professionelle Tipps und direkte Antworten. Gemeinsam besprechen wir,
               wie dein Raum stilvoller, harmonischer und funktionaler wird.
             </p>
             <ul className="svc-list">
@@ -100,9 +100,19 @@ export default function Services() {
           <div className="svc-custom-inner">
             <div className="svc-custom-left">
               <div className="eyebrow svc-custom-eyebrow">Individuell</div>
-              <h3 className="svc-custom-h">
-                Eigene Vorstellungen?<br />
-                <em>Lass uns sprechen.</em>
+              <h3 className="svc-custom-h" data-reveal-words>
+                <span>Eigene </span>
+                <span>Vorstellungen?</span>
+                <br />
+                <span>
+                  <em>Lass </em>
+                </span>
+                <span>
+                  <em>uns </em>
+                </span>
+                <span>
+                  <em>sprechen.</em>
+                </span>
               </h3>
             </div>
             <div className="svc-custom-right">

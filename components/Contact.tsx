@@ -94,7 +94,7 @@ export default function Contact() {
             </div>
             {status === 'success' ? (
               <p className="form-success">
-                Danke — wir melden uns innerhalb von 48 Stunden.
+                Danke, wir melden uns innerhalb von 48 Stunden.
               </p>
             ) : (
               <div className="form">

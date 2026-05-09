@@ -329,7 +329,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: non
 /* =================================================================
    LEISTUNGEN
 ================================================================= */
-.services { padding: 130px 0; background: var(--paper); border-top: 1px solid var(--hairline-soft); }
+.services { padding: 130px 0 0; background: var(--paper); border-top: 1px solid var(--hairline-soft); }
 .services-head { display: grid; grid-template-columns: 1fr 1fr; gap: 40px; align-items: end; margin-bottom: 90px; }
 .services-h { font-family: var(--serif); font-weight: 300; font-size: clamp(48px, 6.2vw, 100px); line-height: 0.95; letter-spacing: -0.025em; text-wrap: balance; }
 .services-h em { font-style: italic; color: var(--terracotta); }
@@ -445,7 +445,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: non
 .svc-custom-h { font-family: var(--serif); font-weight: 300; font-size: clamp(36px, 4vw, 62px); line-height: 1.05; letter-spacing: -0.022em; color: var(--cream); }
 .svc-custom-h em { font-style: italic; color: var(--terracotta-soft); }
 .svc-custom-desc { font-size: 15px; line-height: 1.7; color: rgba(243,237,228,.72); margin-bottom: 36px; }
-.cta--outline-light { border-color: rgba(243,237,228,.45); color: var(--cream); }
+.cta--outline-light { background: transparent; border: 1px solid rgba(243,237,228,.45); color: var(--cream); }
 .cta--outline-light:hover { background: var(--cream); color: var(--char); border-color: var(--cream); }
 
 /* =================================================================

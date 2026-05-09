@@ -72,8 +72,8 @@ export default function Manifesto() {
             </span>
             <span>und </span>
             <span>Qualität </span>
-            <span>legen — </span>
-            <span>ein </span>
+            <span>legen. </span>
+            <span>Ein </span>
             <span>Zuhause, </span>
             <span>das </span>
             <span>im </span>

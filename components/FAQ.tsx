@@ -11,12 +11,12 @@ const faqs = [
   {
     num: 'F 02',
     q: 'Bietet ihr auch Beratung für einzelne Räume an?',
-    a: 'Ja — egal ob kompletter Wohnraum oder nur ein einzelnes Zimmer. Wir gestalten flexibel nach Bedarf, vom Schlafzimmer über die Ankleide bis zum Arbeitsbereich, und kombinieren bei Bedarf einzelne Leistungen wie Moodboard oder 3D-Visualisierung.',
+    a: 'Ja, egal ob kompletter Wohnraum oder nur ein einzelnes Zimmer. Wir gestalten flexibel nach Bedarf, vom Schlafzimmer über die Ankleide bis zum Arbeitsbereich, und kombinieren bei Bedarf einzelne Leistungen wie Moodboard oder 3D-Visualisierung.',
   },
   {
     num: 'F 03',
     q: 'Arbeitet ihr auch digital?',
-    a: 'Wir bieten unsere Leistungen vor Ort und komplett digital an — auch international. Der gesamte Prozess von der Beratung bis zur Shoppingliste lässt sich remote begleiten, sodass dein Standort kein Hindernis ist.',
+    a: 'Wir bieten unsere Leistungen vor Ort und komplett digital an, auch international. Der gesamte Prozess von der Beratung bis zur Shoppingliste lässt sich remote begleiten, sodass dein Standort kein Hindernis ist.',
   },
   {
     num: 'F 04',

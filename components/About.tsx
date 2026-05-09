@@ -7,7 +7,7 @@ export default function About() {
         <div className="about-grid">
           <figure className="about-portrait reveal" style={{ position: 'relative' }}>
             <Image
-              src="/images/portrait.jpg"
+              src="/images/portrait.png"
               alt="Nermin El Rifaey"
               fill
               quality={85}
@@ -34,12 +34,12 @@ export default function About() {
             <div className="about-body">
               <p>
                 Ich bin Nermin El Rifaey, Gründerin von Nermin Interiors. Mit klarem Blick für
-                Gestaltung entwickle ich minimalistische Räume, die Ruhe und Struktur ausstrahlen —
+                Gestaltung entwickle ich minimalistische Räume, die Ruhe und Struktur ausstrahlen.
                 Interiors, die im Alltag funktionieren und gleichzeitig zeitlos wirken.
               </p>
               <p>
                 Mein Anspruch: warme Materialien, ausgewogene Farben und reduzierte Formen.
-                Persönlich begleitet, mit Blick fürs Detail. Kein Showroom-Look — ein Zuhause, das
+                Persönlich begleitet, mit Blick fürs Detail. Kein Showroom-Look. Ein Zuhause, das
                 atmet.
               </p>
             </div>

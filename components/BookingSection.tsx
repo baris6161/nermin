@@ -23,7 +23,7 @@ export default function BookingSection() {
             <span>Raum.</span>
           </h2>
           <p className="booking-lede reveal">
-            Buche direkt deinen Termin — 90 Minuten, online, ganz ohne Verpflichtung.
+            Buche direkt deinen Termin. 90 Minuten, online, ganz ohne Verpflichtung.
             Wir besprechen deinen Raum, deine Wünsche und den nächsten Schritt.
           </p>
         </div>

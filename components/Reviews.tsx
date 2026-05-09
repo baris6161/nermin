@@ -1,16 +1,16 @@
 const reviews = [
   {
-    text: 'Nermin hat unseren Wohnbereich komplett verwandelt. Die Materialauswahl ist zeitlos und das Raumgefühl genau das, was wir uns vorgestellt haben — warm, ruhig und trotzdem lebendig.',
+    text: 'Endlich fühlt sich der Raum stimmig an. Nermin hat sofort verstanden, was uns wichtig ist, und genau das umgesetzt. Kein Schnickschnack, einfach ein schönes Zuhause.',
     name: 'Julia M.',
     project: 'Wohnzimmer · E-Design',
   },
   {
-    text: 'Sehr professionelle und persönliche Beratung. Sie hat sofort verstanden, welchen Stil wir suchen — und das Ergebnis noch besser umgesetzt als wir es uns vorgestellt hatten.',
+    text: 'Wir hatten viele Ideen, aber keinen Plan. Nach dem Design Call war alles klar. Das Schlafzimmer ist jetzt genau so geworden, wie wir es uns gewünscht haben.',
     name: 'Thomas & Sarah K.',
     project: 'Schlafzimmer · Design Call',
   },
   {
-    text: 'Der gesamte Prozess war unkompliziert, schnell und das Ergebnis überzeugend. Ein Zuhause, das endlich so wirkt, wie ich es immer wollte. Absolut empfehlenswert.',
+    text: 'Super unkomplizierte Zusammenarbeit. Nermin hat meinen Geschmack auf Anhieb getroffen. Den Raum erkenne ich kaum wieder.',
     name: 'Marie L.',
     project: 'Homeoffice · E-Design',
   },
