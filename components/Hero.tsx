@@ -1,5 +1,6 @@
 'use client';
 
+import Image from 'next/image';
 import { useEffect } from 'react';
 
 export default function Hero() {
@@ -30,7 +31,17 @@ export default function Hero() {
         className="hero-img"
         data-parallax="0.05"
         style={{ transform: 'translateY(var(--py,0)) scale(1.08)' }}
-      />
+      >
+        <Image
+          src="/images/wohnzimmer.jpg"
+          alt=""
+          fill
+          priority
+          quality={90}
+          sizes="100vw"
+          style={{ objectFit: 'cover', objectPosition: 'center 60%' }}
+        />
+      </div>
       <div className="hero-inner">
         <div className="hero-top">
           <div className="eyebrow">Interior Design Studio</div>

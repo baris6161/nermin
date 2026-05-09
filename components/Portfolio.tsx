@@ -1,11 +1,33 @@
-export default function Portfolio() {
-  const works = [
-    { num: '01 / 04', cls: 'work-1', img: '/images/wohnzimmer.jpg', alt: 'Wohnzimmer', title: 'Wohnzimmer', mood: 'Zeitlos · Entspannt', yr: 'N° 01 · 2025' },
-    { num: '02 / 04', cls: 'work-2', img: '/images/ankleide.jpg', alt: 'Ankleide', title: 'Ankleide', mood: 'Ruhig · Warm', yr: 'N° 02 · 2025' },
-    { num: '03 / 04', cls: 'work-3', img: '/images/arbeitsbereich.jpg', alt: 'Arbeitsbereich', title: 'Arbeitsbereich', mood: 'Klar · Fokussiert', yr: 'N° 03 · 2026' },
-    { num: '04 / 04', cls: 'work-4', img: '/images/badezimmer.jpg', alt: 'Badezimmer', title: 'Badezimmer', mood: 'Spa · Atmosphärisch', yr: 'N° 04 · 2026' },
-  ];
+import Image from 'next/image';
 
+const works = [
+  {
+    num: '01 / 04', cls: 'work-1',
+    img: '/images/wohnzimmer.jpg', alt: 'Wohnzimmer',
+    title: 'Wohnzimmer', mood: 'Zeitlos · Entspannt', yr: 'N° 01 · 2025',
+    sizes: '(max-width: 980px) 100vw, 58vw',
+  },
+  {
+    num: '02 / 04', cls: 'work-2',
+    img: '/images/ankleide.jpg', alt: 'Ankleide',
+    title: 'Ankleide', mood: 'Ruhig · Warm', yr: 'N° 02 · 2025',
+    sizes: '(max-width: 980px) 100vw, 27vw',
+  },
+  {
+    num: '03 / 04', cls: 'work-3',
+    img: '/images/arbeitsbereich.jpg', alt: 'Arbeitsbereich',
+    title: 'Arbeitsbereich', mood: 'Klar · Fokussiert', yr: 'N° 03 · 2026',
+    sizes: '(max-width: 980px) 100vw, 27vw',
+  },
+  {
+    num: '04 / 04', cls: 'work-4',
+    img: '/images/badezimmer.jpg', alt: 'Badezimmer',
+    title: 'Badezimmer', mood: 'Spa · Atmosphärisch', yr: 'N° 04 · 2026',
+    sizes: '(max-width: 980px) 100vw, 44vw',
+  },
+];
+
+export default function Portfolio() {
   return (
     <section className="portfolio" id="arbeiten">
       <div className="wrap-wide">
@@ -27,7 +49,14 @@ export default function Portfolio() {
             <article key={w.cls} className={`work ${w.cls}`}>
               <div className="work-img-wrap">
                 <span className="work-num">{w.num}</span>
-                <img src={w.img} alt={w.alt} />
+                <Image
+                  src={w.img}
+                  alt={w.alt}
+                  fill
+                  quality={80}
+                  sizes={w.sizes}
+                  style={{ objectFit: 'cover' }}
+                />
                 <div className="work-overlay">
                   <span className="work-name">{w.title}</span>
                 </div>

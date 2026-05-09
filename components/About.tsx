@@ -1,10 +1,19 @@
+import Image from 'next/image';
+
 export default function About() {
   return (
     <section className="about" id="studio">
       <div className="wrap">
         <div className="about-grid">
           <figure className="about-portrait reveal">
-            <img src="/images/portrait.jpg" alt="Nermin El Rifaey" />
+            <Image
+              src="/images/portrait.jpg"
+              alt="Nermin El Rifaey"
+              fill
+              quality={85}
+              sizes="(max-width: 980px) 100vw, 42vw"
+              style={{ objectFit: 'cover', objectPosition: 'center 30%' }}
+            />
             <figcaption className="about-portrait-tag">Nermin El Rifaey · Gründerin</figcaption>
           </figure>
 
