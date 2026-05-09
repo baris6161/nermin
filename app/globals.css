@@ -67,9 +67,8 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: non
   background: var(--cream);
   display: flex; flex-direction: column;
   align-items: center; justify-content: center; gap: 52px;
-  transition: opacity .8s var(--ease) .1s, visibility .8s var(--ease) .1s;
 }
-.preloader--done { opacity: 0; visibility: hidden; pointer-events: none; }
+.preloader--done { opacity: 0; visibility: hidden; pointer-events: none; transition: opacity 1.6s var(--ease-soft) .3s, visibility 1.6s var(--ease-soft) .3s; }
 .preloader-logo {
   font-family: var(--serif); font-style: italic; font-size: 30px;
   letter-spacing: -0.015em; color: var(--char);
