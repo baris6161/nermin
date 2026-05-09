@@ -5,7 +5,7 @@ export default function About() {
     <section className="about" id="studio">
       <div className="wrap">
         <div className="about-grid">
-          <figure className="about-portrait reveal">
+          <figure className="about-portrait reveal" style={{ position: 'relative' }}>
             <Image
               src="/images/portrait.jpg"
               alt="Nermin El Rifaey"

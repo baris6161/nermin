@@ -9,10 +9,12 @@ import FAQ from '@/components/FAQ';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
 import Interactions from '@/components/Interactions';
+import Preloader from '@/components/Preloader';
 
 export default function Home() {
   return (
     <>
+      <Preloader />
       <div className="grain" />
       <Nav />
       <Hero />
