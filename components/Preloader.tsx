@@ -8,35 +8,55 @@ export default function Preloader() {
   useEffect(() => {
     const MIN_MS = 1400;
     const start = Date.now();
+    let finished = false;
 
     const finish = () => {
+      if (finished) return;
+      finished = true;
       const wait = Math.max(0, MIN_MS - (Date.now() - start));
       setTimeout(() => setDone(true), wait);
     };
 
-    // Small tick so Next.js has painted the DOM
-    const init = setTimeout(() => {
-      Promise.all([
-        // 1. Fonts ready → marquee text renders correctly
-        document.fonts.ready,
-        // 2. Hero image loaded → no visible image pop-in
-        new Promise<void>((resolve) => {
-          const img = document.querySelector<HTMLImageElement>('.hero-img img');
-          if (!img) { resolve(); return; }
-          if (img.complete && img.naturalWidth > 0) { resolve(); return; }
-          img.addEventListener('load',  () => resolve(), { once: true });
-          img.addEventListener('error', () => resolve(), { once: true });
-        }),
-      ]).then(finish);
-    }, 60);
+    // Polls for hero image until loaded, then resolves
+    const heroReady = new Promise<void>((resolve) => {
+      const check = () => {
+        const img = document.querySelector<HTMLImageElement>('.hero-img img');
+        if (img && img.complete && img.naturalWidth > 0) {
+          resolve();
+          return true;
+        }
+        return false;
+      };
 
-    // Hard safety cap: 7 seconds max
-    const safety = setTimeout(() => setDone(true), 7000);
+      // Already loaded?
+      if (check()) return;
 
-    return () => {
-      clearTimeout(init);
-      clearTimeout(safety);
-    };
+      // Poll every 120ms (reliable across all mobile browsers)
+      const poll = setInterval(() => {
+        if (check()) clearInterval(poll);
+      }, 120);
+
+      // Also listen on the element directly once it appears
+      const observe = new MutationObserver(() => {
+        const img = document.querySelector<HTMLImageElement>('.hero-img img');
+        if (img) {
+          observe.disconnect();
+          if (img.complete && img.naturalWidth > 0) { clearInterval(poll); resolve(); return; }
+          img.addEventListener('load',  () => { clearInterval(poll); resolve(); }, { once: true });
+          img.addEventListener('error', () => { clearInterval(poll); resolve(); }, { once: true });
+        }
+      });
+      observe.observe(document.body, { childList: true, subtree: true });
+
+      // window.load as final fallback
+      window.addEventListener('load', () => { clearInterval(poll); observe.disconnect(); resolve(); }, { once: true });
+    });
+
+    Promise.all([document.fonts.ready, heroReady]).then(finish);
+
+    // Hard cap: 7 seconds
+    const safety = setTimeout(finish, 7000);
+    return () => clearTimeout(safety);
   }, []);
 
   return (
