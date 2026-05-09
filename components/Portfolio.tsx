@@ -6,7 +6,7 @@ const works = [
     img: '/images/wohnzimmer.jpg', alt: 'Wohnzimmer',
     title: 'Wohnzimmer', mood: 'Zeitlos · Entspannt', yr: 'N° 01 · 2025',
     sizes: '(max-width: 980px) 100vw, 58vw',
-    unoptimized: false,
+    unoptimized: true,
   },
   {
     num: '02 / 04', cls: 'work-2',
@@ -27,7 +27,7 @@ const works = [
     img: '/images/badezimmer.jpg', alt: 'Badezimmer',
     title: 'Badezimmer', mood: 'Spa · Atmosphärisch', yr: 'N° 04 · 2026',
     sizes: '(max-width: 980px) 100vw, 44vw',
-    unoptimized: false,
+    unoptimized: true,
   },
 ];
 
