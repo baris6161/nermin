@@ -46,7 +46,7 @@ export default function Services() {
             <h3 className="svc-title serif-i">E&#8209;Design</h3>
             <div className="svc-tag">Komplettes Konzept · Online</div>
             <p className="svc-desc">
-              Das vollständige Interior-Konzept — flexibel und online begleitet. Ideal, wenn du ein
+              Das vollständige Interior-Konzept, flexibel und online begleitet. Ideal, wenn du ein
               durchdachtes Raumkonzept möchtest und die Umsetzung selbst übernimmst.
             </p>
             <ul className="svc-list">
@@ -118,7 +118,7 @@ export default function Services() {
             <div className="svc-custom-right">
               <p className="svc-custom-desc">
                 Jedes Projekt ist einzigartig. Wenn du besondere Anforderungen hast, mehrere Räume
-                gestalten möchtest oder dir nicht sicher bist, welches Paket passt — melde dich
+                gestalten möchtest oder dir nicht sicher bist, welches Paket passt, melde dich
                 einfach. Gemeinsam finden wir den richtigen Weg.
               </p>
               <a className="cta cta--outline-light" href="#kontakt">

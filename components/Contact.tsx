@@ -61,7 +61,7 @@ export default function Contact() {
             </h2>
             <p className="contact-lede">
               Du möchtest deinen Raum stilvoller, harmonischer und funktionaler gestalten? Schreib
-              mir — meist innerhalb von 48 Stunden Antwort.
+              mir, in der Regel antworte ich innerhalb von 48 Stunden.
             </p>
 
             <div className="contact-direct">

@@ -6,7 +6,7 @@ const faqs = [
   {
     num: 'F 01',
     q: 'Wie läuft die Zusammenarbeit ab?',
-    a: 'Wir starten mit einem Gespräch, in dem wir deine Räume, deinen Stil und deine Wünsche kennenlernen. Daraus entsteht ein Konzept — Moodboard, Farbpalette, Materialien — das wir gemeinsam verfeinern. Anschließend begleiten wir dich bis zur Umsetzung mit Shoppinglisten, optionalen 3D-Visualisierungen und kontinuierlicher Rückkopplung.',
+    a: 'Wir starten mit einem Gespräch, in dem wir deine Räume, deinen Stil und deine Wünsche kennenlernen. Daraus entsteht ein Konzept mit Moodboard, Farbpalette und Materialien, das wir gemeinsam verfeinern. Anschließend begleiten wir dich bis zur Umsetzung mit Shoppinglisten, optionalen 3D-Visualisierungen und kontinuierlichem Austausch.',
   },
   {
     num: 'F 02',
@@ -52,7 +52,7 @@ export default function FAQ() {
               <span>Antworten.</span>
             </h2>
             <p className="helper">
-              Was du wissen möchtest, bevor wir starten — und was die meisten Kunden im ersten
+              Was du wissen möchtest, bevor wir starten, und was die meisten Kunden im ersten
               Gespräch fragen.
             </p>
           </aside>
