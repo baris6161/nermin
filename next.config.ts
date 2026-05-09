@@ -4,12 +4,12 @@ const isDev = process.env.NODE_ENV === 'development';
 
 const cspHeader = `
   default-src 'self';
-  script-src 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ''} https://va.vercel-scripts.com https://app.cal.eu;
-  style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
-  font-src 'self' https://fonts.gstatic.com;
+  script-src 'self' 'unsafe-inline'${isDev ? " 'unsafe-eval'" : ''} https://va.vercel-scripts.com https://app.cal.eu https://cal.eu;
+  style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://app.cal.eu;
+  font-src 'self' https://fonts.gstatic.com https://app.cal.eu;
   img-src 'self' blob: data: https:;
-  connect-src 'self' https://vitals.vercel-insights.com https://va.vercel-scripts.com https://app.cal.eu;
-  frame-src https://app.cal.eu;
+  connect-src 'self' https://vitals.vercel-insights.com https://va.vercel-scripts.com https://app.cal.eu https://cal.eu;
+  frame-src https://app.cal.eu https://cal.eu;
   frame-ancestors 'none';
   object-src 'none';
   base-uri 'self';

@@ -3,12 +3,19 @@
 import Cal, { getCalApi } from '@calcom/embed-react';
 import { useEffect } from 'react';
 
+const CAL_EMBED_JS = 'https://app.cal.eu/embed/embed.js';
+const CAL_ORIGIN = 'https://app.cal.eu';
+const CAL_LINK = 'nermin-el-rifaey/30min';
+
 export default function BookingSection() {
   useEffect(() => {
     (async function () {
-      const cal = await getCalApi({ namespace: '30min', embedJsUrl: 'https://app.cal.eu/embed/embed.js' });
+      const cal = await getCalApi({ namespace: '30min', embedJsUrl: CAL_EMBED_JS });
       cal('ui', {
-        cssVarsPerTheme: { dark: { 'cal-brand': '#c46a4f' }, light: { 'cal-brand': '#c46a4f' } },
+        cssVarsPerTheme: {
+          dark: { 'cal-brand': '#c46a4f' },
+          light: { 'cal-brand': '#c46a4f' },
+        },
         hideEventTypeDetails: false,
         layout: 'month_view',
       });
@@ -43,7 +50,9 @@ export default function BookingSection() {
           <div className="booking-widget reveal">
             <Cal
               namespace="30min"
-              calLink="nermin-el-rifaey/30min"
+              calLink={CAL_LINK}
+              calOrigin={CAL_ORIGIN}
+              embedJsUrl={CAL_EMBED_JS}
               config={{ layout: 'month_view', useSlotsViewOnSmallScreen: 'true' }}
               style={{ width: '100%', height: '660px', overflow: 'scroll' }}
             />
