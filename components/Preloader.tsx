@@ -17,39 +17,41 @@ export default function Preloader() {
       setTimeout(() => setDone(true), wait);
     };
 
-    // Polls for hero image until loaded, then resolves
+    // Waits for hero image to be decoded AND painted (two rAFs after decode)
     const heroReady = new Promise<void>((resolve) => {
-      const check = () => {
-        const img = document.querySelector<HTMLImageElement>('.hero-img img');
-        if (img && img.complete && img.naturalWidth > 0) {
-          resolve();
+      const painted = () => requestAnimationFrame(() => requestAnimationFrame(() => resolve()));
+
+      const tryDecode = (img: HTMLImageElement) => {
+        if (img.complete && img.naturalWidth > 0) {
+          img.decode().then(painted).catch(painted);
           return true;
         }
         return false;
       };
 
-      // Already loaded?
-      if (check()) return;
+      const attach = (img: HTMLImageElement) => {
+        if (tryDecode(img)) return;
+        img.addEventListener('load',  () => img.decode().then(painted).catch(painted), { once: true });
+        img.addEventListener('error', painted, { once: true });
+      };
 
-      // Poll every 120ms (reliable across all mobile browsers)
+      const img = document.querySelector<HTMLImageElement>('.hero-img img');
+      if (img) { attach(img); return; }
+
+      // Image element not yet in DOM — observe until it appears
       const poll = setInterval(() => {
-        if (check()) clearInterval(poll);
-      }, 120);
+        const el = document.querySelector<HTMLImageElement>('.hero-img img');
+        if (el) { clearInterval(poll); observe.disconnect(); attach(el); }
+      }, 80);
 
-      // Also listen on the element directly once it appears
       const observe = new MutationObserver(() => {
-        const img = document.querySelector<HTMLImageElement>('.hero-img img');
-        if (img) {
-          observe.disconnect();
-          if (img.complete && img.naturalWidth > 0) { clearInterval(poll); resolve(); return; }
-          img.addEventListener('load',  () => { clearInterval(poll); resolve(); }, { once: true });
-          img.addEventListener('error', () => { clearInterval(poll); resolve(); }, { once: true });
-        }
+        const el = document.querySelector<HTMLImageElement>('.hero-img img');
+        if (el) { clearInterval(poll); observe.disconnect(); attach(el); }
       });
       observe.observe(document.body, { childList: true, subtree: true });
 
-      // window.load as final fallback
-      window.addEventListener('load', () => { clearInterval(poll); observe.disconnect(); resolve(); }, { once: true });
+      // window.load as final safety fallback
+      window.addEventListener('load', () => { clearInterval(poll); observe.disconnect(); painted(); }, { once: true });
     });
 
     Promise.all([document.fonts.ready, heroReady]).then(finish);
