@@ -3,7 +3,7 @@ export default function Footer() {
     <footer className="footer">
       <div className="wrap footer-grid">
         <div className="footer-mark">
-          <span className="dot"></span>nermin&nbsp;<em>interiors</em>
+          Nermin<span className="footer-mark-sub">interiors</span>
         </div>
         <div className="footer-meta">
           <a href="https://instagram.com/nermiin.interiors" target="_blank" rel="noopener noreferrer" aria-label="Instagram">
