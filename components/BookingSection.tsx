@@ -31,7 +31,7 @@ export default function BookingSection() {
         <div className="booking-widget reveal">
           <div
             className="calendly-inline-widget"
-            data-url="https://calendly.com/rifaey-nermin/30min?hide_event_type_details=1&hide_gdpr_banner=1&background_color=1a1714&text_color=f3ede4&primary_color=c46a4f"
+            data-url="https://calendly.com/rifaey-nermin/30min?hide_gdpr_banner=1&background_color=1a1714&text_color=f3ede4&primary_color=c46a4f"
             style={{ minWidth: '320px', height: '700px' }}
           />
         </div>
