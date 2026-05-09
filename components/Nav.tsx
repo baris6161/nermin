@@ -53,8 +53,7 @@ export default function Nav() {
     <>
       <header className="nav" ref={navRef}>
         <a className="logo" href="#top">
-          <span className="dot"></span>
-          nermin<span className="logo-sub">interiors</span>
+          Nermin<span className="logo-sub">interiors</span>
         </a>
         <nav className="nav-links">
           <a href="#studio">Studio</a>

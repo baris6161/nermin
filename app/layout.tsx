@@ -29,16 +29,17 @@ const jetbrains = JetBrains_Mono({
   preload: false,
 });
 
-const BASE_URL = 'https://nermin-interiors.vercel.app';
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://nermin-interiors.de';
+const isProduction = process.env.VERCEL_ENV === 'production' || process.env.NODE_ENV === 'production';
 
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
-    default: 'Nermin Interiors — Minimalistisches Interior Design',
-    template: '%s · Nermin Interiors',
+    default: 'Nermin Interiors - Minimalistisches Interior Design',
+    template: '%s - Nermin Interiors',
   },
   description:
-    'Minimalistisches Interior Design von Nermin El Rifaey. Klare, durchdachte Räume — reduziert, warm, zeitlos. Design Call, E-Design & Curated Shopping.',
+    'Minimalistisches Interior Design von Nermin El Rifaey. Klare, durchdachte Raeume - reduziert, warm, zeitlos. Design Call, E-Design & Curated Shopping.',
   keywords: [
     'Interior Design', 'Inneneinrichtung', 'Minimalistisch', 'Raumgestaltung',
     'Nermin Interiors', 'E-Design', 'Moodboard', 'Interior Beratung', 'Online Interior Design',
@@ -50,29 +51,49 @@ export const metadata: Metadata = {
     locale: 'de_DE',
     url: BASE_URL,
     siteName: 'Nermin Interiors',
-    title: 'Nermin Interiors — Minimalistisches Interior Design',
+    title: 'Nermin Interiors - Minimalistisches Interior Design',
     description:
-      'Klare, durchdachte Räume für Menschen, die Wert auf Ruhe und Qualität legen. Reduziert. Warm. Im Alltag bewohnbar.',
+      'Klare, durchdachte Raeume fuer Menschen, die Wert auf Ruhe und Qualitaet legen. Reduziert. Warm. Im Alltag bewohnbar.',
     images: [
       {
-        url: '/images/wohnzimmer.jpg',
+        url: '/og',
         width: 1200,
         height: 630,
-        alt: 'Nermin Interiors — Minimalistisches Wohnzimmer',
+        alt: 'Nermin Interiors - Minimalistisches Interior Design Studio',
       },
     ],
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Nermin Interiors — Minimalistisches Interior Design',
-    description: 'Klare, durchdachte Räume. Reduziert. Warm. Zeitlos.',
-    images: ['/images/wohnzimmer.jpg'],
+    title: 'Nermin Interiors - Minimalistisches Interior Design',
+    description: 'Klare, durchdachte Raeume. Reduziert. Warm. Zeitlos.',
+    images: ['/og'],
   },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: { index: true, follow: true, 'max-image-preview': 'large' },
+  robots: isProduction
+    ? { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large' } }
+    : { index: false, follow: false },
+  alternates: {
+    canonical: BASE_URL,
   },
+};
+
+const jsonLd = {
+  '@context': 'https://schema.org',
+  '@type': 'ProfessionalService',
+  name: 'Nermin Interiors',
+  url: BASE_URL,
+  description: 'Minimalistisches Interior Design Studio von Nermin El Rifaey.',
+  founder: {
+    '@type': 'Person',
+    name: 'Nermin El Rifaey',
+  },
+  address: {
+    '@type': 'PostalAddress',
+    addressLocality: 'Dortmund',
+    addressCountry: 'DE',
+  },
+  sameAs: ['https://www.instagram.com/nermiin.interiors'],
+  serviceType: ['Interior Design', 'Raumgestaltung', 'E-Design'],
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -81,6 +102,12 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       lang="de"
       className={`${cormorant.variable} ${manrope.variable} ${jetbrains.variable}`}
     >
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+        />
+      </head>
       <body>
         {children}
         <Analytics />

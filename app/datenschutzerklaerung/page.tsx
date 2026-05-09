@@ -2,9 +2,12 @@ import type { Metadata } from 'next';
 import Nav from '@/components/Nav';
 import Footer from '@/components/Footer';
 
+const BASE_URL = process.env.NEXT_PUBLIC_SITE_URL ?? 'https://nermin-interiors.de';
+
 export const metadata: Metadata = {
   title: 'Datenschutzerklärung',
   robots: { index: false, follow: false },
+  alternates: { canonical: `${BASE_URL}/datenschutzerklaerung` },
 };
 
 export default function Datenschutz() {

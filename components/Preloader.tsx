@@ -62,8 +62,7 @@ export default function Preloader() {
   return (
     <div className={`preloader${done ? ' preloader--done' : ''}`}>
       <div className="preloader-logo">
-        <span className="dot" />
-        nermin<span className="preloader-sub">interiors</span>
+        Nermin<span className="preloader-sub">interiors</span>
       </div>
       <div className="preloader-track">
         <div className="preloader-bar" />
