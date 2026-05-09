@@ -6,24 +6,28 @@ const works = [
     img: '/images/wohnzimmer.jpg', alt: 'Wohnzimmer',
     title: 'Wohnzimmer', mood: 'Zeitlos · Entspannt', yr: 'N° 01 · 2025',
     sizes: '(max-width: 980px) 100vw, 58vw',
+    unoptimized: false,
   },
   {
     num: '02 / 04', cls: 'work-2',
     img: '/images/ankleide.jpg', alt: 'Ankleide',
     title: 'Ankleide', mood: 'Ruhig · Warm', yr: 'N° 02 · 2025',
     sizes: '(max-width: 980px) 100vw, 35vw',
+    unoptimized: true,
   },
   {
     num: '03 / 04', cls: 'work-3',
     img: '/images/arbeitsbereich.jpg', alt: 'Arbeitsbereich',
     title: 'Arbeitsbereich', mood: 'Klar · Fokussiert', yr: 'N° 03 · 2026',
     sizes: '(max-width: 980px) 100vw, 35vw',
+    unoptimized: true,
   },
   {
     num: '04 / 04', cls: 'work-4',
     img: '/images/badezimmer.jpg', alt: 'Badezimmer',
     title: 'Badezimmer', mood: 'Spa · Atmosphärisch', yr: 'N° 04 · 2026',
     sizes: '(max-width: 980px) 100vw, 44vw',
+    unoptimized: false,
   },
 ];
 
@@ -55,6 +59,7 @@ export default function Portfolio() {
                   fill
                   quality={90}
                   sizes={w.sizes}
+                  unoptimized={w.unoptimized}
                   style={{ objectFit: 'cover' }}
                 />
                 <div className="work-overlay">
