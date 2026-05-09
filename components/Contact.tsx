@@ -67,7 +67,7 @@ export default function Contact() {
             <div className="contact-direct">
               <a
                 className="contact-tile"
-                href="https://instagram.com/nermin.interiors"
+                href="https://instagram.com/nermiin.interiors"
                 target="_blank"
                 rel="noopener noreferrer"
               >
@@ -80,7 +80,7 @@ export default function Contact() {
                 </span>
                 <span className="contact-tile-body">
                   <span className="contact-tile-label">Instagram</span>
-                  <span className="contact-tile-val">@nermin.interiors</span>
+                  <span className="contact-tile-val">@nermiin.interiors</span>
                 </span>
                 <span className="contact-tile-arrow" aria-hidden="true">↗</span>
               </a>

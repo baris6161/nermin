@@ -583,3 +583,95 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: non
   .manifesto-q { font-size: 26px; }
   .svc-custom-h { font-size: 11vw; }
 }
+
+/* =================================================================
+   LEGAL PAGE CURSOR FIX
+================================================================= */
+.legal-page, .legal-page * { cursor: auto !important; }
+.legal-page a { cursor: pointer !important; }
+.legal-page button { cursor: pointer !important; }
+
+/* =================================================================
+   COMING SOON
+================================================================= */
+.cs {
+  min-height: 100dvh; background: var(--char); color: var(--cream);
+  display: flex; flex-direction: column;
+  padding: 36px;
+  position: relative; overflow: hidden;
+}
+.cs-header { display: flex; justify-content: space-between; align-items: center; }
+.cs-logo {
+  font-family: var(--serif); font-style: italic; font-size: 22px;
+  letter-spacing: -0.015em; color: var(--cream);
+  display: flex; align-items: baseline; gap: .45em;
+}
+.cs-dot {
+  width: 6px; height: 6px; background: var(--terracotta); border-radius: 50%;
+  display: inline-block; transform: translateY(-3px); flex-shrink: 0;
+}
+.cs-logo-sub {
+  font-style: normal; font-family: var(--sans); font-size: 10px;
+  letter-spacing: .22em; text-transform: uppercase; color: rgba(243,237,228,.55);
+  margin-left: 2px;
+}
+.cs-main {
+  flex: 1; display: flex; flex-direction: column;
+  justify-content: center; padding: 80px 0 40px;
+  max-width: 760px;
+}
+.cs-tag { color: rgba(243,237,228,.45); margin-bottom: 32px; }
+.cs-h {
+  font-family: var(--serif); font-weight: 300;
+  font-size: clamp(72px, 12vw, 180px);
+  line-height: 0.9; letter-spacing: -0.03em;
+  color: var(--cream); margin-bottom: 40px;
+}
+.cs-h em { font-style: italic; color: var(--terracotta-soft); }
+.cs-lede {
+  font-size: clamp(14px, 1.2vw, 16px); line-height: 1.75;
+  color: rgba(243,237,228,.6); margin-bottom: 48px;
+}
+.cs-insta {
+  display: inline-flex; align-items: center; gap: 12px;
+  font-family: var(--mono); font-size: 11.5px; letter-spacing: .1em;
+  text-transform: uppercase; color: rgba(243,237,228,.65);
+  border: 1px solid rgba(243,237,228,.18); border-radius: 999px;
+  padding: 12px 24px;
+  transition: color .3s, border-color .3s;
+  width: fit-content;
+}
+.cs-insta:hover { color: var(--cream); border-color: rgba(243,237,228,.45); }
+.cs-footer {
+  display: flex; justify-content: space-between; align-items: flex-end;
+  gap: 24px; flex-wrap: wrap;
+}
+.cs-form { display: flex; flex-direction: column; gap: 10px; }
+.cs-fields { display: flex; gap: 8px; align-items: center; flex-wrap: wrap; }
+.cs-field input {
+  background: rgba(243,237,228,.06); border: 1px solid rgba(243,237,228,.15);
+  color: var(--cream); font-family: var(--sans); font-size: 12px;
+  letter-spacing: .06em; padding: 12px 18px; border-radius: 999px;
+  outline: none; width: 160px; transition: border-color .3s;
+}
+.cs-field input::placeholder { color: rgba(243,237,228,.3); }
+.cs-field input:focus { border-color: rgba(243,237,228,.4); }
+.cs-btn {
+  background: var(--terracotta); color: var(--cream);
+  font-family: var(--sans); font-size: 11px; font-weight: 500;
+  letter-spacing: .18em; text-transform: uppercase;
+  padding: 12px 28px; border-radius: 999px; border: none;
+  cursor: pointer; transition: background .3s, opacity .3s;
+  white-space: nowrap;
+}
+.cs-btn:hover { background: var(--terracotta-soft); }
+.cs-btn:disabled { opacity: .5; cursor: not-allowed; }
+.cs-error { font-size: 11px; color: var(--terracotta-soft); letter-spacing: .06em; padding-left: 4px; }
+.cs-copy { font-family: var(--mono); font-size: 10px; letter-spacing: .12em; text-transform: uppercase; color: rgba(243,237,228,.3); white-space: nowrap; }
+@media (max-width: 600px) {
+  .cs { padding: 24px; }
+  .cs-footer { flex-direction: column-reverse; align-items: flex-start; }
+  .cs-fields { flex-direction: column; align-items: stretch; }
+  .cs-field input { width: 100%; }
+  .cs-btn { width: 100%; text-align: center; }
+}
