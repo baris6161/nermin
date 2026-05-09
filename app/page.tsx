@@ -5,6 +5,8 @@ import About from '@/components/About';
 import Manifesto from '@/components/Manifesto';
 import Portfolio from '@/components/Portfolio';
 import Services from '@/components/Services';
+import Reviews from '@/components/Reviews';
+import BookingSection from '@/components/BookingSection';
 import FAQ from '@/components/FAQ';
 import Contact from '@/components/Contact';
 import Footer from '@/components/Footer';
@@ -23,6 +25,8 @@ export default function Home() {
       <Manifesto />
       <Portfolio />
       <Services />
+      <Reviews />
+      <BookingSection />
       <FAQ />
       <Contact />
       <Footer />

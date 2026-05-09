@@ -35,13 +35,7 @@ export default function Services() {
               <li>Raumoptimierung &amp; Stylingideen</li>
               <li>Direkte Antworten auf deine Fragen</li>
             </ul>
-            <div className="svc-foot">
-              <div className="svc-price">
-                <small>Preis</small>90&nbsp;€
-              </div>
-              <div className="svc-optional">90 Min · Online</div>
-            </div>
-            <a className="svc-cta" href="#kontakt">
+            <a className="svc-cta" href="#buchen">
               <span>Design&nbsp;Call buchen</span>
               <span className="arrow"></span>
             </a>
@@ -62,15 +56,9 @@ export default function Services() {
               <li>Stilistische Raumplanung</li>
               <li>Persönliche Shoppingliste</li>
             </ul>
-            <div className="svc-foot">
-              <div className="svc-price">
-                <small>ab</small>690&nbsp;€<small className="per">/ Raum</small>
-              </div>
-              <div className="svc-optional">
-                +&nbsp;3D-Visualisierung
-                <br />
-                optional ab 290&nbsp;€
-              </div>
+            <div className="svc-addons">
+              <span className="svc-addon-label">Buchbar dazu</span>
+              <span className="svc-addon">3D-Visualisierung</span>
             </div>
             <a className="svc-cta is-light" href="#kontakt">
               <span>E-Design anfragen</span>
@@ -93,21 +81,43 @@ export default function Services() {
               <li>Kuratierte Shoppingliste</li>
               <li>Abgestimmt auf deinen Stil</li>
             </ul>
-            <div className="svc-foot">
-              <div className="svc-price">
-                <small>ab</small>290&nbsp;€<small className="per">/ Raum</small>
-              </div>
-              <div className="svc-optional">
-                +&nbsp;Moodboard ab 149&nbsp;€
-                <br />
-                +&nbsp;3D ab 290&nbsp;€
-              </div>
+            <div className="svc-addons">
+              <span className="svc-addon-label">Buchbar dazu</span>
+              <span className="svc-addon">Moodboard</span>
+              <span className="svc-addon">3D-Visualisierung</span>
             </div>
             <a className="svc-cta" href="#kontakt">
               <span>Shopping anfragen</span>
               <span className="arrow"></span>
             </a>
           </article>
+        </div>
+      </div>
+
+      {/* Custom / Individual Offer */}
+      <div className="svc-custom">
+        <div className="wrap-wide">
+          <div className="svc-custom-inner">
+            <div className="svc-custom-left">
+              <div className="eyebrow svc-custom-eyebrow">Individuell</div>
+              <h3 className="svc-custom-h">
+                Eigene Vorstellungen?<br />
+                <em>Lass uns sprechen.</em>
+              </h3>
+            </div>
+            <div className="svc-custom-right">
+              <p className="svc-custom-desc">
+                Jedes Projekt ist einzigartig. Wenn du besondere Anforderungen hast, mehrere Räume
+                gestalten möchtest oder dir nicht sicher bist, welches Paket passt — melde dich
+                einfach. Gemeinsam finden wir den richtigen Weg.
+              </p>
+              <a className="cta cta--outline-light" href="#kontakt">
+                <span className="cta-inner">
+                  Kontakt aufnehmen<span className="arrow"></span>
+                </span>
+              </a>
+            </div>
+          </div>
         </div>
       </div>
     </section>

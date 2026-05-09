@@ -66,7 +66,7 @@ export default function Hero() {
             vorziehen. Reduziert. Warm. Im Alltag bewohnbar.
           </p>
           <div className="hero-cta-wrap">
-            <a className="cta cta--cream" href="#kontakt">
+            <a className="cta cta--cream" href="#buchen">
               <span className="cta-inner">
                 Design Call buchen<span className="arrow"></span>
               </span>

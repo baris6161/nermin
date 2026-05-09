@@ -61,7 +61,7 @@ export default function Nav() {
           <a href="#arbeiten">Arbeiten</a>
           <a href="#leistungen">Leistungen</a>
           <a href="#fragen">Fragen</a>
-          <a href="#kontakt" className="nav-cta">Design Call</a>
+          <a href="#buchen" className="nav-cta">Design Call</a>
         </nav>
         <button
           className="nav-burger"
@@ -81,7 +81,7 @@ export default function Nav() {
           <a href="#arbeiten">Arbeiten</a>
           <a href="#leistungen">Leistungen</a>
           <a href="#fragen">Fragen</a>
-          <a href="#kontakt" className="mnav-cta">
+          <a href="#buchen" className="mnav-cta">
             Design Call buchen<span className="arrow"></span>
           </a>
           <div className="mnav-meta">

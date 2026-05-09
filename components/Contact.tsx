@@ -61,32 +61,26 @@ export default function Contact() {
             </h2>
             <p className="contact-lede">
               Du möchtest deinen Raum stilvoller, harmonischer und funktionaler gestalten? Schreib
-              mir oder buche direkt einen Design Call — meist innerhalb von 48 Stunden Antwort.
+              mir — meist innerhalb von 48 Stunden Antwort.
             </p>
 
             <div className="contact-direct">
-              <a className="contact-tile" href="mailto:nermin.interiors@gmail.com">
+              <a
+                className="contact-tile"
+                href="https://instagram.com/nermin.interiors"
+                target="_blank"
+                rel="noopener noreferrer"
+              >
                 <span className="contact-tile-icn" aria-hidden="true">
                   <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4">
-                    <rect x="3" y="5" width="18" height="14" rx="1.2" />
-                    <path d="M3.6 6 12 13l8.4-7" />
+                    <rect x="3" y="3" width="18" height="18" rx="5" />
+                    <circle cx="12" cy="12" r="4" />
+                    <circle cx="17.5" cy="6.5" r=".7" fill="currentColor" stroke="none" />
                   </svg>
                 </span>
                 <span className="contact-tile-body">
-                  <span className="contact-tile-label">E-Mail</span>
-                  <span className="contact-tile-val">nermin.interiors@gmail.com</span>
-                </span>
-                <span className="contact-tile-arrow" aria-hidden="true">↗</span>
-              </a>
-              <a className="contact-tile" href="tel:+491622017106">
-                <span className="contact-tile-icn" aria-hidden="true">
-                  <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.4">
-                    <path d="M5 4h3l2 5-2.5 1.5a11 11 0 0 0 6 6L15 14l5 2v3a2 2 0 0 1-2 2A15 15 0 0 1 3 6a2 2 0 0 1 2-2Z" />
-                  </svg>
-                </span>
-                <span className="contact-tile-body">
-                  <span className="contact-tile-label">Telefon</span>
-                  <span className="contact-tile-val">+49 162 2017106</span>
+                  <span className="contact-tile-label">Instagram</span>
+                  <span className="contact-tile-val">@nermin.interiors</span>
                 </span>
                 <span className="contact-tile-arrow" aria-hidden="true">↗</span>
               </a>

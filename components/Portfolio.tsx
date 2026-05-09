@@ -70,13 +70,7 @@ export default function Portfolio() {
           ))}
         </div>
 
-        <div className="portfolio-foot reveal">
-          <a className="cta cta--ghost" href="#kontakt">
-            <span className="cta-inner">
-              Mehr Projekte anfragen<span className="arrow"></span>
-            </span>
-          </a>
-        </div>
+
       </div>
     </section>
   );
