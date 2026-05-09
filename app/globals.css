@@ -215,10 +215,9 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: non
 ================================================================= */
 .hero { position: relative; height: 100svh; min-height: 760px; overflow: hidden; background: var(--char); color: var(--cream); }
 .hero-img { position: absolute; inset: 0; overflow: hidden; transform: scale(1.08); animation: kenburns 24s var(--ease-soft) infinite alternate; }
-.hero::before { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(180deg, rgba(20,17,13,.38) 0%, rgba(20,17,13,0) 30%, rgba(20,17,13,0) 48%, rgba(20,17,13,.72) 100%), radial-gradient(80% 60% at 22% 80%, rgba(20,17,13,.32), transparent); }
-.hero::after { content: ""; position: absolute; bottom: 0; left: 0; right: 0; height: 220px; z-index: 1; background: linear-gradient(to top, rgba(20,17,13,.9) 0%, rgba(20,17,13,.5) 40%, transparent 100%); pointer-events: none; }
+.hero::before { content: ""; position: absolute; inset: 0; z-index: 1; background: linear-gradient(180deg, rgba(20,17,13,.32) 0%, rgba(20,17,13,0) 28%, rgba(20,17,13,0) 60%, rgba(20,17,13,.55) 100%), radial-gradient(80% 60% at 22% 80%, rgba(20,17,13,.28), transparent); }
 @keyframes kenburns { 0% { transform: scale(1.04) translate(-1%, 0); } 100% { transform: scale(1.14) translate(2%, -1.5%); } }
-.hero-inner { position: relative; z-index: 3; height: 100%; padding: 0 36px; max-width: 1640px; margin: 0 auto; display: grid; grid-template-rows: auto 1fr auto; }
+.hero-inner { position: relative; z-index: 2; height: 100%; padding: 0 36px; max-width: 1640px; margin: 0 auto; display: grid; grid-template-rows: auto 1fr auto; }
 .hero-top { display: flex; justify-content: space-between; padding-top: 110px; }
 .hero-top .eyebrow { color: var(--cream); opacity: .85; }
 .hero-headline { align-self: end; font-family: var(--serif); font-weight: 300; font-size: clamp(72px, 13.2vw, 220px); line-height: 0.92; letter-spacing: -0.025em; color: var(--cream); margin-bottom: 6vh; max-width: 14ch; }
@@ -445,7 +444,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: non
 ================================================================= */
 @media (max-width: 980px) {
   /* Portfolio: Photo → Info → divider (no divider between photo and info) */
-  .portfolio-grid { grid-template-columns: 1fr; gap: 0; }
+  .portfolio-grid { gap: 0; }
   .work + .work { padding-top: 44px; }
   .work-info { border-top: none; margin-top: 16px; border-bottom: 1px solid var(--hairline); padding-bottom: 24px; }
 
@@ -472,7 +471,8 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: non
   .portfolio-head { grid-template-columns: 1fr; text-align: left; gap: 18px; margin-bottom: 48px; }
   .portfolio-h { text-align: left; }
   .portfolio-meta { text-align: left; }
-  .work-1, .work-2, .work-3, .work-4 { padding-top: 0; }
+  .portfolio-grid { grid-template-columns: 1fr; gap: 48px; }
+  .work-1, .work-2, .work-3, .work-4 { grid-column: 1; padding-top: 0; }
   .svc-grid { grid-template-columns: 1fr; }
   .svc { border-right: none; min-height: auto; padding: 32px 24px; }
   .svc-foot { flex-direction: column; align-items: flex-start; gap: 16px; }
