@@ -10,7 +10,7 @@ export default function About() {
               src="/images/portrait.png"
               alt="Nermin El Rifaey"
               fill
-              quality={85}
+              unoptimized
               sizes="(max-width: 980px) 100vw, 42vw"
               style={{ objectFit: 'cover', objectPosition: 'center 30%' }}
             />
