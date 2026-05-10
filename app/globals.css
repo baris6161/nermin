@@ -583,6 +583,8 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: non
 .legal-page, .legal-page * { cursor: auto !important; }
 .legal-page a { cursor: pointer !important; }
 .legal-page button { cursor: pointer !important; }
+body:has(.legal-page) .footer, body:has(.legal-page) .footer * { cursor: auto !important; }
+body:has(.legal-page) .footer a, body:has(.legal-page) .footer button { cursor: pointer !important; }
 
 /* =================================================================
    COMING SOON
