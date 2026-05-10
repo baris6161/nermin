@@ -12,6 +12,7 @@ export default function BookingSection() {
     (async function () {
       const cal = await getCalApi({ namespace: '30min', embedJsUrl: CAL_EMBED_JS });
       cal('ui', {
+        theme: 'dark',
         cssVarsPerTheme: {
           dark: { 'cal-brand': '#c46a4f' },
           light: { 'cal-brand': '#c46a4f' },
@@ -53,7 +54,7 @@ export default function BookingSection() {
               calLink={CAL_LINK}
               calOrigin={CAL_ORIGIN}
               embedJsUrl={CAL_EMBED_JS}
-              config={{ layout: 'month_view', useSlotsViewOnSmallScreen: 'true' }}
+              config={{ layout: 'month_view', useSlotsViewOnSmallScreen: 'true', theme: 'dark' }}
               style={{ width: '100%', height: '660px', overflow: 'scroll' }}
             />
           </div>

@@ -47,7 +47,7 @@ export default function About() {
             <div className="about-meta">
               <div>
                 <span className="label">Studio</span>
-                <strong>2024</strong>
+                <strong>2025</strong>
                 <span className="sub">gegründet</span>
               </div>
               <div>
