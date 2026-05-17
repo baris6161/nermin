@@ -34,8 +34,7 @@ export default function Impressum() {
               <section className="legal-section">
                 <h2>Kontakt</h2>
                 <p>
-                  E-Mail: <a href="mailto:nermin.interiors@gmail.com">nermin.interiors@gmail.com</a><br />
-                  Telefon: <a href="tel:+491622017106">+49 162 2017106</a>
+                  E-Mail: <a href="mailto:nermin.interiors@gmail.com">nermin.interiors@gmail.com</a>
                 </p>
               </section>
 
