@@ -19,21 +19,12 @@ export function proxy(req: NextRequest) {
 
   if (isPublicPath(pathname)) return NextResponse.next();
 
-  // Redirect /coming-soon → / so canonical URL is always /
+  // Redirect /coming-soon → / (site is live)
   if (pathname === '/coming-soon' || pathname === '/coming-soon/') {
     return NextResponse.redirect(new URL('/', req.url), { status: 301 });
   }
 
-  const authed = req.cookies.get('nermin-preview')?.value === PREVIEW_TOKEN;
-
-  if (authed) return NextResponse.next();
-
-  // Unauthenticated: rewrite / to /coming-soon (browser URL stays /), redirect everything else to /
-  if (pathname === '/') {
-    return NextResponse.rewrite(new URL('/coming-soon', req.url));
-  }
-
-  return NextResponse.redirect(new URL('/', req.url), { status: 302 });
+  return NextResponse.next();
 }
 
 export const config = {
