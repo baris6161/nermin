@@ -42,7 +42,7 @@ export default function Portfolio() {
             <span>vier&nbsp;Stimmungen.</span>
           </h2>
           <div className="portfolio-meta reveal">
-            2024 — 2026
+            2025 — 2026
             <br />
             Privat · Atelier · Hospitality
           </div>
