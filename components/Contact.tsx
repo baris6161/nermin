@@ -65,7 +65,7 @@ export default function Contact() {
             </p>
 
             <div className="contact-direct">
-              <
+              <a
                 className="contact-tile"
                 href="https://instagram.com/nermiin.interiors"
                 target="_blank"
