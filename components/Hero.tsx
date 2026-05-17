@@ -34,7 +34,7 @@ export default function Hero() {
       >
         <Image
           src="/images/wohnzimmer.jpg"
-          alt=""
+          alt="Minimalistisch gestaltetes Wohnzimmer mit weißen Boiserie-Paneelen, cremefarbener Einrichtung und elegantem Kronleuchter"
           fill
           priority
           unoptimized
@@ -44,7 +44,7 @@ export default function Hero() {
       </div>
       <div className="hero-inner">
         <div className="hero-top">
-          <div className="eyebrow">Interior Design Studio</div>
+          <div className="eyebrow">Interior Design Studio · Dortmund</div>
         </div>
 
         <h1 className="hero-headline" data-reveal-words>

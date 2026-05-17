@@ -61,18 +61,19 @@ export default function Datenschutz() {
               </section>
 
               <section className="legal-section">
-                <h2>4. Terminbuchung via Calendly</h2>
+                <h2>4. Terminbuchung via Cal.eu</h2>
                 <p>
-                  Auf dieser Website ist ein Buchungs-Widget des Drittanbieters Calendly LLC,
-                  271 17th St NW, Suite 1000, Atlanta, GA 30363, USA eingebunden. Wenn du einen
-                  Termin buchst, verarbeitet Calendly deine Angaben (Name, E-Mail, Terminwunsch)
-                  direkt auf deren Plattform. Calendly ist durch einen Auftragsverarbeitungsvertrag
-                  gebunden und nimmt am EU-US Data Privacy Framework teil.
+                  Auf dieser Website ist ein Buchungs-Widget des Anbieters Cal.com, Inc.,
+                  2261 Market Street #5257, San Francisco, CA 94114, USA (Dienst: cal.eu)
+                  eingebunden. Wenn du einen Termin buchst, verarbeitet Cal.eu deine Angaben
+                  (Name, E-Mail, Terminwunsch) direkt auf deren Plattform. Cal.com ist durch
+                  einen Auftragsverarbeitungsvertrag gebunden und nimmt am EU-US Data Privacy
+                  Framework teil. Die Datenverarbeitung erfolgt auf Servern in der EU (cal.eu).
                 </p>
                 <p>
-                  Datenschutzerklärung von Calendly:{' '}
-                  <a href="https://calendly.com/privacy" target="_blank" rel="noopener noreferrer">
-                    calendly.com/privacy
+                  Datenschutzerklärung von Cal.com:{' '}
+                  <a href="https://cal.com/privacy" target="_blank" rel="noopener noreferrer">
+                    cal.com/privacy
                   </a>
                 </p>
               </section>
@@ -91,7 +92,7 @@ export default function Datenschutz() {
                 <p>
                   Diese Website setzt keine eigenen Tracking-Cookies. Vercel Analytics erfasst
                   anonymisierte Nutzungsdaten ohne personenbezogene Rückschlüsse und ohne Cookies.
-                  Das Calendly-Widget kann technisch notwendige Cookies setzen.
+                  Das Cal.eu-Widget kann technisch notwendige Cookies setzen.
                 </p>
               </section>
 

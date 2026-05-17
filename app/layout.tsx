@@ -35,11 +35,11 @@ const isProduction = process.env.VERCEL_ENV === 'production' || process.env.NODE
 export const metadata: Metadata = {
   metadataBase: new URL(BASE_URL),
   title: {
-    default: 'Nermin Interiors - Minimalistisches Interior Design',
-    template: '%s - Nermin Interiors',
+    default: 'Nermin Interiors · Interior Design Studio Dortmund',
+    template: '%s · Nermin Interiors',
   },
   description:
-    'Minimalistisches Interior Design von Nermin El Rifaey. Klare, durchdachte Räume - reduziert, warm, zeitlos. Design Call, E-Design & Curated Shopping.',
+    'Interior Design Studio von Nermin El Rifaey in Dortmund. Minimalistische Räume — reduziert, warm, zeitlos. Design Call ab 90 €, E-Design & Curated Shopping. Online buchbar.',
   keywords: [
     'Interior Design', 'Inneneinrichtung', 'Minimalistisch', 'Raumgestaltung',
     'Nermin Interiors', 'E-Design', 'Moodboard', 'Interior Beratung', 'Online Interior Design',
@@ -51,9 +51,9 @@ export const metadata: Metadata = {
     locale: 'de_DE',
     url: BASE_URL,
     siteName: 'Nermin Interiors',
-    title: 'Nermin Interiors - Minimalistisches Interior Design',
+    title: 'Nermin Interiors · Interior Design Studio Dortmund',
     description:
-      'Klare, durchdachte Räume für Menschen, die Wert auf Ruhe und Qualität legen. Reduziert. Warm. Im Alltag bewohnbar.',
+      'Minimalistische Räume für Menschen, die Wert auf Ruhe und Qualität legen. Design Call, E-Design & Curated Shopping — online buchbar.',
     images: [
       {
         url: '/og',
@@ -65,8 +65,8 @@ export const metadata: Metadata = {
   },
   twitter: {
     card: 'summary_large_image',
-    title: 'Nermin Interiors - Minimalistisches Interior Design',
-    description: 'Klare, durchdachte Räume. Reduziert. Warm. Zeitlos.',
+    title: 'Nermin Interiors · Interior Design Studio Dortmund',
+    description: 'Minimalistische Räume. Reduziert. Warm. Zeitlos. Online buchbar.',
     images: ['/og'],
   },
   robots: isProduction
@@ -77,23 +77,80 @@ export const metadata: Metadata = {
   },
 };
 
-const jsonLd = {
+const localBusinessSchema = {
   '@context': 'https://schema.org',
-  '@type': 'ProfessionalService',
+  '@type': 'LocalBusiness',
   name: 'Nermin Interiors',
   url: BASE_URL,
-  description: 'Minimalistisches Interior Design Studio von Nermin El Rifaey.',
+  description: 'Minimalistisches Interior Design Studio von Nermin El Rifaey in Dortmund. E-Design, Design Call und Curated Shopping — online und deutschlandweit.',
+  telephone: '+491622017106',
+  email: 'nermin.interiors@gmail.com',
   founder: {
     '@type': 'Person',
     name: 'Nermin El Rifaey',
+    jobTitle: 'Interior Designerin',
+    url: BASE_URL,
+    sameAs: ['https://www.instagram.com/nermiin.interiors'],
   },
   address: {
     '@type': 'PostalAddress',
+    streetAddress: 'Echeloh 25',
     addressLocality: 'Dortmund',
+    postalCode: '44149',
     addressCountry: 'DE',
   },
+  areaServed: { '@type': 'Country', name: 'Germany' },
   sameAs: ['https://www.instagram.com/nermiin.interiors'],
-  serviceType: ['Interior Design', 'Raumgestaltung', 'E-Design'],
+  hasOfferCatalog: {
+    '@type': 'OfferCatalog',
+    name: 'Interior Design Leistungen',
+    itemListElement: [
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Design Call',
+          description: '90-minütige Online-Beratung zu Möbeln, Farben, Raumoptimierung und Stylingideen.',
+        },
+        price: '90',
+        priceCurrency: 'EUR',
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'E-Design',
+          description: 'Vollständiges Interior-Konzept mit Moodboard, Farbkonzept, Möbel- und Materialauswahl sowie persönlicher Shoppingliste.',
+        },
+        price: '690',
+        priceCurrency: 'EUR',
+        description: 'ab 690 € pro Raum',
+      },
+      {
+        '@type': 'Offer',
+        itemOffered: {
+          '@type': 'Service',
+          name: 'Curated Shopping',
+          description: 'Individuell abgestimmte Shoppingliste für Möbel, Materialien und Dekoration.',
+        },
+        price: '290',
+        priceCurrency: 'EUR',
+        description: 'ab 290 € pro Raum',
+      },
+    ],
+  },
+};
+
+const webSiteSchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebSite',
+  name: 'Nermin Interiors',
+  url: BASE_URL,
+  inLanguage: 'de-DE',
+  publisher: {
+    '@type': 'LocalBusiness',
+    name: 'Nermin Interiors',
+  },
 };
 
 export default function RootLayout({ children }: { children: React.ReactNode }) {
@@ -105,7 +162,11 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
       <head>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(localBusinessSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteSchema) }}
         />
       </head>
       <body>

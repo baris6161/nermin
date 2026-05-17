@@ -3,28 +3,28 @@ import Image from 'next/image';
 const works = [
   {
     num: '01 / 04', cls: 'work-1',
-    img: '/images/wohnzimmer.jpg', alt: 'Wohnzimmer',
+    img: '/images/wohnzimmer.jpg', alt: 'Minimalistisch gestaltetes Wohnzimmer mit klassischen Wandpaneelen und cremefarbener Einrichtung — Nermin Interiors',
     title: 'Wohnzimmer', mood: 'Zeitlos · Entspannt', yr: 'N° 01 · 2025',
     sizes: '(max-width: 980px) 100vw, 58vw',
     unoptimized: true,
   },
   {
     num: '02 / 04', cls: 'work-2',
-    img: '/images/ankleide.jpg', alt: 'Ankleide',
+    img: '/images/ankleide.jpg', alt: 'Elegante Ankleide mit warmen Materialien und ruhiger, strukturierter Atmosphäre — Nermin Interiors',
     title: 'Ankleide', mood: 'Ruhig · Warm', yr: 'N° 02 · 2025',
     sizes: '(max-width: 980px) 100vw, 35vw',
     unoptimized: true,
   },
   {
     num: '03 / 04', cls: 'work-3',
-    img: '/images/arbeitsbereich.jpg', alt: 'Arbeitsbereich',
+    img: '/images/arbeitsbereich.jpg', alt: 'Klarer, minimalistischer Arbeitsbereich mit fokussiertem Design und ruhiger Gesamtwirkung — Nermin Interiors',
     title: 'Arbeitsbereich', mood: 'Klar · Fokussiert', yr: 'N° 03 · 2026',
     sizes: '(max-width: 980px) 100vw, 35vw',
     unoptimized: true,
   },
   {
     num: '04 / 04', cls: 'work-4',
-    img: '/images/badezimmer.jpg', alt: 'Badezimmer',
+    img: '/images/badezimmer.jpg', alt: 'Atmosphärisches Badezimmer im Spa-Stil mit minimalistischer Gestaltung — Nermin Interiors',
     title: 'Badezimmer', mood: 'Spa · Atmosphärisch', yr: 'N° 04 · 2026',
     sizes: '(max-width: 980px) 100vw, 44vw',
     unoptimized: true,
