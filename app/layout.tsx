@@ -56,7 +56,7 @@ export const metadata: Metadata = {
       'Minimalistische Räume für Menschen, die Wert auf Ruhe und Qualität legen. Design Call, E-Design & Curated Shopping — online buchbar.',
     images: [
       {
-        url: '/favicon/og-image.jpg',
+        url: '/og',
         width: 1200,
         height: 630,
         alt: 'Nermin Interiors — Räume, die ruhig bleiben.',
@@ -67,7 +67,7 @@ export const metadata: Metadata = {
     card: 'summary_large_image',
     title: 'Nermin Interiors · Interior Design Studio Dortmund',
     description: 'Minimalistische Räume. Reduziert. Warm. Zeitlos. Online buchbar.',
-    images: ['/favicon/og-image.jpg'],
+    images: ['/og'],
   },
   robots: isProduction
     ? { index: true, follow: true, googleBot: { index: true, follow: true, 'max-image-preview': 'large' } }
@@ -80,9 +80,8 @@ export const metadata: Metadata = {
       { url: '/favicon/favicon.svg', type: 'image/svg+xml' },
       { url: '/favicon/favicon-32x32.png', sizes: '32x32', type: 'image/png' },
       { url: '/favicon/favicon-16x16.png', sizes: '16x16', type: 'image/png' },
-      { url: '/favicon/favicon.ico' },
     ],
-    apple: [{ url: '/favicon/apple-touch-icon.png', sizes: '180x180' }],
+    apple: [{ url: '/apple-icon', sizes: '180x180', type: 'image/png' }],
     other: [{ rel: 'mask-icon', url: '/favicon/safari-pinned-tab.svg' }],
   },
   manifest: '/favicon/site.webmanifest',
