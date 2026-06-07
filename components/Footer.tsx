@@ -17,6 +17,9 @@ export default function Footer() {
           <a href="/impressum">Impressum</a>
           <a href="/datenschutzerklaerung">Datenschutz</a>
           <span>© {new Date().getFullYear()} Nermin El&nbsp;Rifaey</span>
+          <a href="https://b4-solutions.de" target="_blank" rel="noopener noreferrer" className="footer-built-by">
+            Built by B4&#8209;Solutions
+          </a>
         </div>
       </div>
     </footer>

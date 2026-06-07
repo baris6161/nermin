@@ -478,6 +478,8 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: non
 .footer-meta { display: flex; gap: 36px; align-items: center; font-family: var(--mono); font-size: 10.5px; letter-spacing: .12em; text-transform: uppercase; color: rgba(243,237,228,.55); }
 .footer-meta a { display: inline-flex; align-items: center; gap: 8px; }
 .footer-meta a:hover { color: var(--cream); }
+.footer-built-by { opacity: .35; transition: opacity .3s var(--ease); }
+.footer-built-by:hover { opacity: 1; color: rgba(243,237,228,.55) !important; }
 
 /* =================================================================
    LEGAL PAGES
