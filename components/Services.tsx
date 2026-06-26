@@ -94,9 +94,34 @@ export default function Services() {
         </div>
 
         <div className="svc-bridge reveal">
-          <p className="svc-bridge-text">
-            Noch unsicher, welches Paket passt? <em>Oder erstmal ein kostenloses
-            Erstgespräch</em>, um gemeinsam herauszufinden, was das Passende ist.
+          <p className="svc-bridge-text" data-reveal-words>
+            <span>Noch </span>
+            <span>unsicher, </span>
+            <span>welches </span>
+            <span>Paket </span>
+            <span>passt? </span>
+            <span>
+              <em>Oder </em>
+            </span>
+            <span>
+              <em>erstmal </em>
+            </span>
+            <span>
+              <em>ein </em>
+            </span>
+            <span>
+              <em>kostenloses </em>
+            </span>
+            <span>
+              <em>Erstgespräch,</em>{' '}
+            </span>
+            <span>um </span>
+            <span>gemeinsam </span>
+            <span>herauszufinden, </span>
+            <span>was </span>
+            <span>das </span>
+            <span>Passende </span>
+            <span>ist.</span>
           </p>
           <a className="cta cta--ghost" href="#buchen">
             <span className="cta-inner">
