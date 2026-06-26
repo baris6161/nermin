@@ -100,6 +100,7 @@ export default function Services() {
             <span>welches </span>
             <span>Paket </span>
             <span>passt? </span>
+            <br />
             <span>
               <em>Oder </em>
             </span>
@@ -115,6 +116,7 @@ export default function Services() {
             <span>
               <em>Erstgespräch,</em>{' '}
             </span>
+            <br />
             <span>um </span>
             <span>gemeinsam </span>
             <span>herauszufinden, </span>
@@ -125,7 +127,7 @@ export default function Services() {
           </p>
           <a className="cta cta--ghost" href="#buchen">
             <span className="cta-inner">
-              Kostenloses Erstgespräch buchen<span className="arrow"></span>
+              Kostenloses Erstgespräch buchen
             </span>
           </a>
         </div>

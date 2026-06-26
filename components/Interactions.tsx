@@ -67,6 +67,45 @@ export default function Interactions() {
   }, []);
 
   useEffect(() => {
+    // Scroll-scrubbed word reveal for the services bridge (wie .manifesto-q)
+    const items = Array.from(document.querySelectorAll<HTMLElement>('.svc-bridge-text'))
+      .map((el) => {
+        const words = el.querySelectorAll<HTMLElement>(':scope > span, :scope > em');
+        return { el, words, N: words.length };
+      })
+      .filter((it) => it.N);
+    if (!items.length) return;
+    let raf = 0;
+    const update = () => {
+      raf = 0;
+      const vh = window.innerHeight;
+      const win = 0.32;
+      items.forEach(({ el, words, N }) => {
+        const r = el.getBoundingClientRect();
+        const startY = vh * 0.85;
+        const endY = vh * 0.32;
+        let p = (startY - r.top) / (startY - endY);
+        p = Math.max(0, Math.min(1, p));
+        words.forEach((w, i) => {
+          const t = i / Math.max(1, N - 1);
+          let local = (p * (1 + win) - t) / win;
+          local = Math.max(0, Math.min(1, local));
+          w.style.opacity = local.toFixed(3);
+          w.style.transform = `translateY(${((1 - local) * 0.45).toFixed(3)}em)`;
+        });
+      });
+    };
+    const onScroll = () => { if (!raf) raf = requestAnimationFrame(update); };
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', onScroll);
+    update();
+    return () => {
+      window.removeEventListener('scroll', onScroll);
+      window.removeEventListener('resize', onScroll);
+    };
+  }, []);
+
+  useEffect(() => {
     // Magnetic CTA
     const ctaEls = document.querySelectorAll<HTMLElement>('.cta');
     const handlers: Array<{ el: HTMLElement; move: (e: MouseEvent) => void; leave: () => void }> = [];

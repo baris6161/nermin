@@ -433,8 +433,13 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: non
 .svc.is-feature .svc-addon::before { color: var(--terracotta-soft); }
 
 .svc-bridge { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 34px; padding: 96px 0 110px; }
-.svc-bridge-text { font-family: var(--serif); font-weight: 300; font-size: clamp(26px, 3.4vw, 46px); line-height: 1.16; letter-spacing: -0.02em; color: var(--char); max-width: 900px; text-wrap: balance; }
+.svc-bridge-text { font-family: var(--serif); font-weight: 300; font-size: clamp(26px, 3.2vw, 44px); line-height: 1.18; letter-spacing: -0.02em; color: var(--char); max-width: 1040px; }
 .svc-bridge-text em { font-style: italic; color: var(--terracotta); }
+/* scroll-scrubbed word reveal (driven by Interactions.tsx, wie .manifesto-q) */
+.svc-bridge-text[data-reveal-words] > span,
+.svc-bridge-text[data-reveal-words] > em { opacity: 0; transform: translateY(0.4em); transition: opacity .35s linear, transform .5s var(--ease-soft); transition-delay: 0s !important; }
+.svc-bridge-text[data-reveal-words].in > span,
+.svc-bridge-text[data-reveal-words].in > em { opacity: 0; transform: translateY(0.4em); }
 .svc-custom { background: var(--char); color: var(--cream); padding: 72px 0; }
 .svc-custom-inner { display: grid; grid-template-columns: 1fr 1fr; gap: 80px; align-items: center; }
 .svc-custom-eyebrow { color: rgba(243,237,228,.5); margin-bottom: 20px; }
@@ -582,6 +587,7 @@ button { font: inherit; color: inherit; background: none; border: 0; cursor: non
   .manifesto-q { font-size: 26px; }
   .svc-custom-h { font-size: 11vw; }
   .svc-bridge-text { font-size: 25px; line-height: 1.22; }
+  .svc-bridge-text br { display: none; }
   .svc-bridge .cta { width: 100%; max-width: 380px; justify-content: center; white-space: normal; text-align: center; padding: 20px 24px; letter-spacing: .16em; }
   .svc-bridge .cta .cta-inner { flex-wrap: wrap; justify-content: center; gap: 12px; }
 }
