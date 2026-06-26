@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     template: '%s · Nermin Interiors',
   },
   description:
-    'Interior Design Studio von Nermin El Rifaey in Dortmund. Minimalistische Räume — reduziert, warm, zeitlos. Design Call ab 90 €, E-Design & Curated Shopping. Online buchbar.',
+    'Interior Design Studio von Nermin El Rifaey in Dortmund. Minimalistische Räume — reduziert, warm, zeitlos. Design Call, E-Design & Curated Shopping. Online buchbar.',
   keywords: [
     'Interior Design', 'Inneneinrichtung', 'Minimalistisch', 'Raumgestaltung',
     'Nermin Interiors', 'E-Design', 'Moodboard', 'Interior Beratung', 'Online Interior Design',
@@ -119,8 +119,6 @@ const localBusinessSchema = {
           name: 'Design Call',
           description: '90-minütige Online-Beratung zu Möbeln, Farben, Raumoptimierung und Stylingideen.',
         },
-        price: '90',
-        priceCurrency: 'EUR',
       },
       {
         '@type': 'Offer',
