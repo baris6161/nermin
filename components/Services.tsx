@@ -44,7 +44,7 @@ export default function Services() {
           <article className="svc is-feature reveal">
             <div className="svc-num">N°&nbsp;02 · meistgewählt</div>
             <h3 className="svc-title serif-i">E&#8209;Design</h3>
-            <div className="svc-tag">Komplettes Konzept · Online</div>
+            <div className="svc-tag">Komplettes Konzept · Online · Kostenpflichtig</div>
             <p className="svc-desc">
               Das vollständige Interior-Konzept, flexibel und online begleitet. Ideal, wenn du ein
               durchdachtes Raumkonzept möchtest und die Umsetzung selbst übernimmst.
@@ -69,7 +69,7 @@ export default function Services() {
           <article className="svc reveal">
             <div className="svc-num">N°&nbsp;03</div>
             <h3 className="svc-title">Curated&nbsp;Shopping</h3>
-            <div className="svc-tag">Möbel · Materialien · Deko</div>
+            <div className="svc-tag">Möbel · Materialien · Deko · Kostenpflichtig</div>
             <p className="svc-desc">
               Für alle, die ihren Stil bereits kennen und Unterstützung bei der passenden Auswahl
               möchten. Eine individuell abgestimmte Shoppingliste mit stilistisch passenden
@@ -91,6 +91,18 @@ export default function Services() {
               <span className="arrow"></span>
             </a>
           </article>
+        </div>
+
+        <div className="svc-bridge reveal">
+          <p className="svc-bridge-text">
+            Noch unsicher, welches Paket passt? <em>Oder erstmal ein kostenloses
+            Erstgespräch</em>, um gemeinsam herauszufinden, was das Passende ist.
+          </p>
+          <a className="cta cta--ghost" href="#buchen">
+            <span className="cta-inner">
+              Kostenloses Erstgespräch buchen<span className="arrow"></span>
+            </span>
+          </a>
         </div>
       </div>
 
