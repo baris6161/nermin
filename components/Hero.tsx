@@ -68,7 +68,7 @@ export default function Hero() {
           <div className="hero-cta-wrap">
             <a className="cta cta--cream" href="#buchen">
               <span className="cta-inner">
-                Design Call buchen<span className="arrow"></span>
+                Kostenloses Erstgespräch buchen<span className="arrow"></span>
               </span>
             </a>
             <div className="hero-scroll">

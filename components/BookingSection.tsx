@@ -30,7 +30,7 @@ export default function BookingSection() {
           <div className="booking-left reveal">
             <div className="eyebrow booking-eyebrow">
               <span className="bar"></span>
-              <span>Design Call buchen</span>
+              <span>Kostenloses Erstgespräch buchen</span>
             </div>
             <h2 className="booking-h" data-reveal-words>
               <span>Dein erster </span>
@@ -43,8 +43,9 @@ export default function BookingSection() {
               <span>Raum.</span>
             </h2>
             <p className="booking-lede">
-              Buche direkt deinen Termin. 90 Minuten, online, ganz ohne Verpflichtung.
-              Wir besprechen deinen Raum, deine Wünsche und den nächsten Schritt.
+              30 Minuten, online, kostenlos und unverbindlich. Wir lernen deinen Raum
+              und deine Wünsche kennen, besprechen, wohin die Reise geht, und finden
+              gemeinsam heraus, welches Paket am besten zu dir passt.
             </p>
           </div>
 

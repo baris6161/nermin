@@ -67,7 +67,7 @@ export default function Nav() {
           <a href={href('#arbeiten')}>Arbeiten</a>
           <a href={href('#leistungen')}>Leistungen</a>
           <a href={href('#fragen')}>Fragen</a>
-          <a href={href('#buchen')} className="nav-cta">Design Call</a>
+          <a href={href('#buchen')} className="nav-cta">Erstgespräch</a>
         </nav>
         <button
           className="nav-burger"
@@ -88,7 +88,7 @@ export default function Nav() {
           <a href={href('#leistungen')}>Leistungen</a>
           <a href={href('#fragen')}>Fragen</a>
           <a href={href('#buchen')} className="mnav-cta">
-            Design Call buchen<span className="arrow"></span>
+            Kostenloses Erstgespräch buchen<span className="arrow"></span>
           </a>
           <div className="mnav-meta">
             <a href="mailto:nermin.interiors@gmail.com">nermin.interiors@gmail.com</a>

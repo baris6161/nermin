@@ -46,7 +46,7 @@ const faqSchema = {
       name: 'Was kostet ein vollständiges Konzept?',
       acceptedAnswer: {
         '@type': 'Answer',
-        text: 'Der Preis richtet sich nach dem Umfang deines Projekts und deinen individuellen Wünschen. Im unverbindlichen Design Call sprechen wir gemeinsam darüber, was zu dir passt, und ich stelle dir ein passendes Angebot zusammen.',
+        text: 'Der Preis richtet sich nach dem Umfang deines Projekts und deinen individuellen Wünschen. Im kostenlosen Erstgespräch sprechen wir gemeinsam darüber, was zu dir passt, und ich stelle dir ein passendes Angebot zusammen.',
       },
     },
   ],

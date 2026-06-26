@@ -24,7 +24,7 @@ export default function Services() {
           <article className="svc reveal">
             <div className="svc-num">N°&nbsp;01</div>
             <h3 className="svc-title">Design&nbsp;Call</h3>
-            <div className="svc-tag">90 Minuten · Online</div>
+            <div className="svc-tag">90 Minuten · Online · Kostenpflichtig</div>
             <p className="svc-desc">
               Frische Ideen, professionelle Tipps und direkte Antworten. Gemeinsam besprechen wir,
               wie dein Raum stilvoller, harmonischer und funktionaler wird.
@@ -35,8 +35,8 @@ export default function Services() {
               <li>Raumoptimierung &amp; Stylingideen</li>
               <li>Direkte Antworten auf deine Fragen</li>
             </ul>
-            <a className="svc-cta" href="#buchen">
-              <span>Design&nbsp;Call buchen</span>
+            <a className="svc-cta" href="#kontakt">
+              <span>Design&nbsp;Call anfragen</span>
               <span className="arrow"></span>
             </a>
           </article>
