@@ -101,7 +101,6 @@ const localBusinessSchema = {
   },
   address: {
     '@type': 'PostalAddress',
-    streetAddress: 'Echeloh 25',
     addressLocality: 'Dortmund',
     postalCode: '44149',
     addressCountry: 'DE',

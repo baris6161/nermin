@@ -26,7 +26,6 @@ export default function Datenschutz() {
                 <p>
                   Nermin El Rifaey<br />
                   Nermin Interiors<br />
-                  Echeloh 25<br />
                   44149 Dortmund<br />
                   E-Mail: <a href="mailto:nermin.interiors@gmail.com">nermin.interiors@gmail.com</a>
                 </p>

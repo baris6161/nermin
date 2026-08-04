@@ -26,7 +26,6 @@ export default function Impressum() {
                 <p>
                   Nermin El Rifaey<br />
                   Nermin Interiors<br />
-                  Echeloh 25<br />
                   44149 Dortmund
                 </p>
               </section>
